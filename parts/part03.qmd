@@ -18,7 +18,7 @@ format:
     toc: false
     echo: true
     incremental: false
-    pdf:
+  pdf:
     toc: true
     number-sections: true
     colorlinks: true

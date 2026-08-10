@@ -1,5 +1,5 @@
 ---
-title: "Part 4: Working Session and Q&A"
+title: "Part 1a: Quantitative Data Collection"
 subtitle: "Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute"
 author: "Nathan Alexander, PhD"
 institute: 
@@ -8,13 +8,13 @@ institute:
 format: 
   html: default
   revealjs:
-    output-file: part04-slides.html
+    output-file: part01a-slides.html
     height: 900
     width: 1600
     smaller: false
     slide-number: c/t #< collapsted/total
     logo: "../img/howard-logo.jpg"
-    footer: "[Workshop GitHub](https://quant-shop.github.io/elps-data-methods-institute/)"
+    footer: "[Workshop Website](https://quant-shop.github.io/elps-data-methods-institute/)"
     toc: false
     echo: true
     incremental: false
@@ -32,10 +32,9 @@ editor_options:
 
 ```{r setup, include=F, warning=F, message=F}
 library(here)
-here::i_am("part04.qmd")
+here::i_am("part01a.qmd")
 ```
 
 Text goes here.
 
 ## Recommended readings
-

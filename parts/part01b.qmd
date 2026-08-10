@@ -1,5 +1,5 @@
 ---
-title: "Part 1: Getting started in R and Posit"
+title: "Part 1b: Getting started in R and Posit"
 subtitle: "Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute"
 author: "Nathan Alexander, PhD"
 institute: 
@@ -8,14 +8,14 @@ institute:
 format: 
   html: default
   revealjs:
-    output-file: part01-slides.html
+    output-file: part01b-slides.html
     height: 900
     width: 1600
     smaller: false
     scrollable: true
     slide-number: c/t #< collapsted/total
     logo: "../img/howard-logo.jpg"
-    footer: "[Workshop GitHub](https://quant-shop.github.io/elps-data-methods-institute/)"
+    footer: "[Workshop Website](https://quant-shop.github.io/elps-data-methods-institute/)"
     toc: false
     echo: true
     incremental: false
@@ -33,7 +33,7 @@ editor_options:
 
 ```{r setup, include=F, warning=F, message=F}
 library(here)
-here::i_am("part01.qmd")
+here::i_am("part01b.qmd")
 ```
 
 ## Using Posit Cloud

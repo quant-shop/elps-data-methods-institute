@@ -43,12 +43,16 @@ website:
           text: Computing
     - section: "Workshop slides"
       contents:
-        - href: parts/part01.qmd
-          text: Part 1
+        - href: parts/part01a.qmd
+          text: Part 1a
+        - href: parts/part01b.qmd
+          text: Part 1b
         - href: parts/part02.qmd
-          text: Part 2
+          text: Part 2  
         - href: parts/part03.qmd
-          text: Part 3      
+          text: Part 3  
+        - href: parts/part04.qmd
+          text: Part 4   
           
 format:
   html:
