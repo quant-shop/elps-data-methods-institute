@@ -101,7 +101,7 @@
     "href": "parts/part01.html#packages",
     "title": "Part 1: Getting started in R and Posit",
     "section": "Packages",
-    "text": "Packages\nPackages in R are collections of functions, data, and documentation that extend the language’s capabilities. They allow users to easily share and reuse code, making R a powerful and flexible tool for data analysis and visualization.\nPackages can be installed from repositories like CRAN, and once installed, they can be loaded into an R session to access their functionality. The tidyverse, for example, is a popular collection of packages that provides a consistent and user-friendly approach to data manipulation and visualization.\n\nInstall the Praise package.\n\n# install the package\ninstall.packages(\"praise\", repos = \"http://cran.us.r-project.org\")\n\n\nThe downloaded binary packages are in\n    /var/folders/t2/v2ypghs120z45678ty2nqfk00000gn/T//RtmpjRbpVg/downloaded_packages\n\n\n\n\nLoad the Praise package\n\n# load library\nlibrary(praise)\n\n\n\nNow get some Praise!\n\n# get some praise\npraise()\n\n[1] \"You are legendary!\"",
+    "text": "Packages\nPackages in R are collections of functions, data, and documentation that extend the language’s capabilities. They allow users to easily share and reuse code, making R a powerful and flexible tool for data analysis and visualization.\nPackages can be installed from repositories like CRAN, and once installed, they can be loaded into an R session to access their functionality. The tidyverse, for example, is a popular collection of packages that provides a consistent and user-friendly approach to data manipulation and visualization.\n\nInstall the Praise package.\n\n# install the package\ninstall.packages(\"praise\", repos = \"http://cran.us.r-project.org\")\n\n\nThe downloaded binary packages are in\n    /var/folders/t2/v2ypghs120z45678ty2nqfk00000gn/T//RtmpZ5ThGO/downloaded_packages\n\n\n\n\nLoad the Praise package\n\n# load library\nlibrary(praise)\n\n\n\nNow get some Praise!\n\n# get some praise\npraise()\n\n[1] \"You are beautiful!\"",
     "crumbs": [
       "Workshop slides",
       "Part 1"
@@ -166,7 +166,7 @@
     "href": "parts/part01-slides.html#packages",
     "title": "Part 1: Getting started in R and Posit",
     "section": "Packages",
-    "text": "Packages\nPackages in R are collections of functions, data, and documentation that extend the language’s capabilities. They allow users to easily share and reuse code, making R a powerful and flexible tool for data analysis and visualization.\nPackages can be installed from repositories like CRAN, and once installed, they can be loaded into an R session to access their functionality. The tidyverse, for example, is a popular collection of packages that provides a consistent and user-friendly approach to data manipulation and visualization.\nInstall the Praise package.\n\n# install the package\ninstall.packages(\"praise\", repos = \"http://cran.us.r-project.org\")\n\n\nThe downloaded binary packages are in\n    /var/folders/t2/v2ypghs120z45678ty2nqfk00000gn/T//RtmpjRbpVg/downloaded_packages\n\n\nLoad the Praise package\n\n# load library\nlibrary(praise)\n\nNow get some Praise!\n\n# get some praise\npraise()\n\n[1] \"You are legendary!\""
+    "text": "Packages\nPackages in R are collections of functions, data, and documentation that extend the language’s capabilities. They allow users to easily share and reuse code, making R a powerful and flexible tool for data analysis and visualization.\nPackages can be installed from repositories like CRAN, and once installed, they can be loaded into an R session to access their functionality. The tidyverse, for example, is a popular collection of packages that provides a consistent and user-friendly approach to data manipulation and visualization.\nInstall the Praise package.\n\n# install the package\ninstall.packages(\"praise\", repos = \"http://cran.us.r-project.org\")\n\n\nThe downloaded binary packages are in\n    /var/folders/t2/v2ypghs120z45678ty2nqfk00000gn/T//RtmpkoyT8S/downloaded_packages\n\n\nLoad the Praise package\n\n# load library\nlibrary(praise)\n\nNow get some Praise!\n\n# get some praise\npraise()\n\n[1] \"You are hunky-dory!\""
   },
   {
     "objectID": "parts/part01-slides.html#arithmetic-in-r",
@@ -312,7 +312,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute",
+    "title": "Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute",
     "section": "",
     "text": "Thank you for joining us. This site is to support your learning during this Quantitative Section of the 2026 Howard University ELPS Methods and Data Institute. My name is Professor Nathan Alexander and I will be today’s facilitator.\nToday’s workshop is about quantitative data collection and analysis.\nIn particular, we’ll focus on survey methods and I’ll introduce some interesting tools and methods for computational text analysis – which, with time and care, can be applied to your interviews and focus groups.\nFor today’s institute, we will use an alternative to SPSS known as R. The software platform is free and online, meaning you will not need to download anything to your computer. However, if you’d like to get the software set up locally, instructions are here.",
     "crumbs": [
@@ -323,7 +323,7 @@
   {
     "objectID": "index.html#learning-outcomes",
     "href": "index.html#learning-outcomes",
-    "title": "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute",
+    "title": "Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute",
     "section": "Learning Outcomes",
     "text": "Learning Outcomes\nBy the end of this workshop, you will be able to:\n\nDescribe basic data analysis workflows using real-world educational data\nProduce a technical report using what is called an R Markdown (in Quarto)\n\nImport, clean, and visualize data using tidyverse tools\n\nFormulate and interpret critical research questions using a data set\nExtend methods to support your dissertation research and analysis",
     "crumbs": [
@@ -334,7 +334,7 @@
   {
     "objectID": "index.html#schedule",
     "href": "index.html#schedule",
-    "title": "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute",
+    "title": "Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute",
     "section": "Schedule",
     "text": "Schedule\n\n\n\nSession\nTopic\nDuration\nTime\n\n\n\n\n\nIntroduction & site orientation\n10 minutes\n10:00–10:10 AM\n\n\n1a\nQuantitative data collection\n30 minutes\n10:10–10:40 AM\n\n\n\nTech break\n5 minutes\n10:40–10:45 AM\n\n\n1b\nGetting started in R and Posit\n45 minutes\n10:45–11:30 AM\n\n\n\nBreak\n30 minutes\n11:30 AM–12:00 PM\n\n\n2\nQuantitative data analysis\n60 minutes\n12:00-1:00 PM\n\n\n\nLunch break\n30 minutes\n1:00–1:30 PM\n\n\n3\nWorking session and Q&A\n90 minutes\n1:30 - 3:00 PM",
     "crumbs": [

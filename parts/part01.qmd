@@ -12,12 +12,19 @@ format:
     height: 900
     width: 1600
     smaller: false
+    scrollable: true
     slide-number: c/t #< collapsted/total
     logo: "../img/howard-logo.jpg"
     footer: "[Workshop GitHub](https://quant-shop.github.io/elps-data-methods-institute/)"
     toc: false
     echo: true
     incremental: false
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    geometry: 
+      - margin=1in
 geometry: margin=1.0in
 editor_options:
   markdown:

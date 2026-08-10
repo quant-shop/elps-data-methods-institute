@@ -18,6 +18,12 @@ format:
     toc: false
     echo: true
     incremental: false
+    pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    geometry: 
+      - margin=1in
 geometry: margin=1.0in
 editor_options:
   markdown:
