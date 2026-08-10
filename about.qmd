@@ -30,7 +30,7 @@ At our core, our lab integrates high-dimensional data sets to analyze problems o
 
 We also engage in spatial data analysis and Black archival studies in our analysis of primary documents that relate to the use of mathematics, statistics, and data to advance racial, economic, and spatial justice.
 
--   [Here](https://rpubs.com/professornaite/crit-comp-geo-pt1) is some of our work in spatial data analysis.
+-   [Here](https://rpubs.com/professornaite/crit-comp-geo-pt1){target="_blank"} is some of our work in spatial data analysis.
 
 -   [Here](https://rpubs.com/professornaite/hidden-network-connections){target="_blank"} is a talk about our archival work on Black mathematicians.
 
