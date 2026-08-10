@@ -1,5 +1,5 @@
 ---
-title: "Part 2: Quantitative Data Analysis"
+title: "Part 2: Quantitative data analysis"
 subtitle: "Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute"
 author: "Nathan Alexander, PhD"
 institute: 

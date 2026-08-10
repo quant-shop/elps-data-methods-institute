@@ -1,5 +1,5 @@
 ---
-title: "Part 1a: Quantitative Data Collection"
+title: "Part 1a: Quantitative data collection"
 subtitle: "Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute"
 author: "Nathan Alexander, PhD"
 institute: 
@@ -35,6 +35,36 @@ library(here)
 here::i_am("part01a.qmd")
 ```
 
-Text goes here.
+## What data collection entails
+
+## Quantification
+
+## Sampling data
+
+### The sample frame
+
+#### Comprehensiveness
+
+#### Probbaility of selection
+
+#### Efficiency
+
+### Example: Traditionalist view
+
+### Example: Deficit view
+
+### Sampling procedures
+
+### Example: Traditionalist view
+
+### Example: Critical theory
+
+### Sample design and estimates
+
+## Storing data
+
+### Example: Traditionalist view
+
+### Example: Critical theory
 
 ## Recommended readings

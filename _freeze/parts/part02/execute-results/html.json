@@ -1,5 +1,5 @@
 {
-  "hash": "143d77ed825859dadb5c5fdcae87d44d",
+  "hash": "06d824e23c121188096bafd3c6564957",
   "result": {
     "engine": "knitr",
     "markdown": "---\ntitle: \"Part 2: Quantitative Data Analysis\"\nsubtitle: \"Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute\"\nauthor: \"Nathan Alexander, PhD\"\ninstitute: \n  - \"School of Education\"\n  - \"Center for Applied Data Science and Analytics\"\nformat: \n  html: default\n  revealjs:\n    output-file: part02-slides.html\n    height: 900\n    width: 1600\n    smaller: false\n    slide-number: c/t #< collapsted/total\n    logo: \"../img/howard-logo.jpg\"\n    footer: \"[Workshop Website](https://quant-shop.github.io/elps-data-methods-institute/)\"\n    toc: false\n    echo: true\n    incremental: false\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    geometry: \n      - margin=1in\ngeometry: margin=1.0in\neditor_options:\n  markdown:\n    wrap: sentence\n---\n\n\n",
