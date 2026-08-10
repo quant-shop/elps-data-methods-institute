@@ -1,0 +1,68 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  page-navigation: true
+  title: "ELPS Data and Methods Institute: Quantitative Data Collection and Analysis"  
+  description: "Homepage for the Quantitative Section of the Howard University ELPS Methods and Data Institute"
+  site-url: "https://quant-shop.github.io/elps-data-methods-institute/"
+  
+  repo-url: https://github.com/quant-shop/elps-data-methods-institute/
+  
+  open-graph: true
+  
+  page-footer:
+    right: "This page was built by Nathan Alexander, PhD in [Quarto](https://quarto.org/)"
+    left: "&copy; Copyright 2026, Nathan Alexander"
+    background: "#D9E3E4"
+    
+  sidebar:
+    background: "#D9E3E4"
+    logo: "img/howard-logo.jpg"
+    pinned: true
+    align: center
+    tools: 
+      - icon: github
+        href: https://github.com/quant-shop/elps-data-methods-institute
+        text: "GitHub organization"
+  
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:  
+    - section: "Institute information"
+      contents:
+        - href: index.qmd
+          text: Home
+        - href: about.qmd
+          text: Facilitator
+        - href: data.qmd
+          text: Sample data
+        - href: computing.qmd
+          text: Computing
+    - section: "Workshop slides"
+      contents:
+        - href: parts/part01.qmd
+          text: Part 1
+        - href: parts/part02.qmd
+          text: Part 2
+        - href: parts/part03.qmd
+          text: Part 3      
+          
+format:
+  html:
+    theme: 
+      light: [cosmo, style/data202.scss]
+      dark: [cosmo, style/data202.scss, style/theme-dark.scss]
+    mainfont: "Atkinson Hyperlegible"
+    callout-appearance: simple
+    colorlinnks: true
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+    
+execute: 
+  freeze: auto
+    
+editor: visual

@@ -1,0 +1,112 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the Facilitator",
+    "section": "",
+    "text": "Hi folks. My name is Nathan and I am an assistant professor in the Howard University School of Education and the HU Center for Applied Data Science and Analytics (CADSA). I am looking forward to learning together and I encourage you to contribute your expertise during our time.",
+    "crumbs": [
+      "Institute information",
+      "Facilitator"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute",
+    "section": "",
+    "text": "Thank you for joining us. This site is to support your learning during this Quantitative Section of the 2026 Howard University ELPS Methods and Data Institute. My name is Professor Nathan Alexander and I will be today’s facilitator.\nThis workshop is about quantitative data collection and analysis. For this course, I will take a Computational Studies in Education (CSIE) approach. CSIE is an interdisciplinary field that uses computational methods — like data analysis, modeling, and machine learning — to study how people learn, behave, and interact in social and educational contexts. At its core, it blends ideas from education, the social sciences, and computer science.\nInstead of relying only on traditional paper-based methods that focus on small-scale surveys or interviews, this field works with large-scale and complex data for:\nGiven our time constraints today, we’ll focus on a few key foundations.",
+    "crumbs": [
+      "Institute information",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
+    "title": "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nBy the end of this workshop, you will be able to:\n\nDescribe basic data analysis workflows using real-world educational data\nProduce a technical reports using what is called an R Markdown (in Quarto)\n\nImport, clean, and visualize data using tidyverse tools\n\nFormulate and interpret equity-focused research questions using data\n\nExtend these methods to support your dissertation research and analysis",
+    "crumbs": [
+      "Institute information",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nPart\nTopic\nDuration\nTime\n\n\n\n\n\nWelcome & site orientation\n15 minutes\n9:45–10:00 AM\n\n\n\nTech break\n10 minutes\n10:00–10:10 AM\n\n\n1\nGetting started in R and Posit\n30 minutes\n5:10–5:40 PM\n\n\n\nBreak\n5 minutes\n5:40–5:45 PM\n\n\n2\nConducting a literature scan\n15 minutes\n5:45–6:00 PM\n\n\n\nBreak\n5 minutes\n6:00–6:05 PM\n\n\n3\nWorking with large-scale data\n45 minutes\n6:05–6:50 PM\n\n\n\nQ&A\n10 minutes\n6:50–7:00 PM",
+    "crumbs": [
+      "Institute information",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#recommended-readings",
+    "href": "index.html#recommended-readings",
+    "title": "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute",
+    "section": "Recommended readings",
+    "text": "Recommended readings\nBaumer, B. S., Kaplan, D. T., & Horton, N. J. (2017). Modern data science with R. Chapman and Hall/CRC.\nGrolemund, G., & Wickham, H. (2017). R for data science: Import, tidy, transform, visualize, and model data. O’Reilly Media. https://r4ds.had.co.nz/\nKnaflic, C. N. (2015). Storytelling with data: A data visualization guide for business professionals. Wiley.\nPeng, R. D. (2016). R programming for data science. Leanpub. https://bookdown.org/rdpeng/rprogdatascience/\nRStudio Education (n.d.). Learning R for Beginners. Online. https://education.rstudio.com/learn/beginner/\nWickham, H. (2019). Advanced R (2nd ed.). Chapman and Hall/CRC. https://adv-r.hadley.nz/",
+    "crumbs": [
+      "Institute information",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about.html#teaching",
+    "href": "about.html#teaching",
+    "title": "About the Facilitator",
+    "section": "Teaching",
+    "text": "Teaching\nAt Howard, I teach a variety of courses across the School of Education and CADSA. I hold a joint appointment in the Department of Curriculum and Instruction, where I teach math methods and international education, and in the Program in Applied Data Science and Analytics, where I teach courses in computation, probability, and statistical modeling.",
+    "crumbs": [
+      "Institute information",
+      "Facilitator"
+    ]
+  },
+  {
+    "objectID": "about.html#research",
+    "href": "about.html#research",
+    "title": "About the Facilitator",
+    "section": "Research",
+    "text": "Research\nBroadly, my research focuses on three strands: (1) the role of “context” in probability, statistics, and mathematical modeling, (2) how humans learn to use increasingly complex information to quantify things across the lifespan, and (3) Black diaspora studies in educator preparation. Starting in early childhood education all the way up to elderhood, I am also interested in how quantification informs decision-making, perspectives on the world, and critical computational practices1 in informal and non-traditional settings.\nHere are a few examples by strand (click on the text):\n\nThe role of “context” in probability, statistics, and mathematical modeling\nHow humans learn to use complex information to quantify things\nBlack diaspora studies in educator preparation",
+    "crumbs": [
+      "Institute information",
+      "Facilitator"
+    ]
+  },
+  {
+    "objectID": "about.html#research-lab",
+    "href": "about.html#research-lab",
+    "title": "About the Facilitator",
+    "section": "Research Lab",
+    "text": "Research Lab\nAt Howard, I direct the Quantitative Histories Workshop, which is a computational curriculum collective and community-centered teaching and learning lab.\nAt our core, our lab integrates high-dimensional data sets to analyze problems over long periods of time, like centuries. We then engage in what is called “uncertainty quantification” to test models that describe how much error we think is present in both our data and analysis.\nWe also engage in spatial data analysis and Black archival studies in our analysis of primary documents that relate to the use of mathematics, statistics, and data to advance racial, economic, and spatial justice.\n\nHere is some of our work in spatial data analysis.\nHere is a talk about our archival work on Black mathematicians.\n\nYou can find out more about me and my lab’s research online here.\n\n\n\nFacilitator: Nathan Alexander, PhD\n\n\nIf you have any questions or want to learn more, you can contact me via email: nathan [dot] alexander [at] howard [dot] edu",
+    "crumbs": [
+      "Institute information",
+      "Facilitator"
+    ]
+  },
+  {
+    "objectID": "about.html#footnotes",
+    "href": "about.html#footnotes",
+    "title": "About the Facilitator",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nComputational practices are the habits, behaviors, and working methods people use when solving problems with computers, like when using calculators or when coding.↩︎",
+    "crumbs": [
+      "Institute information",
+      "Facilitator"
+    ]
+  },
+  {
+    "objectID": "about.html#lab",
+    "href": "about.html#lab",
+    "title": "About the Facilitator",
+    "section": "Lab",
+    "text": "Lab\nAt Howard, I direct the Quantitative Histories Workshop, which is a computational curriculum collective and community-centered teaching and learning lab.\nAt our core, our lab integrates high-dimensional data sets to analyze problems over long periods of time, like centuries. We then engage in what is called “uncertainty quantification” to test models that describe how much error we think is present in both our data and analysis.\nWe also engage in spatial data analysis and Black archival studies in our analysis of primary documents that relate to the use of mathematics, statistics, and data to advance racial, economic, and spatial justice.\n\nHere is some of our work in spatial data analysis.\nHere is a talk about our archival work on Black mathematicians.\n\nYou can find out more about me and my lab’s research online here.\n\n\n\nFacilitator: Nathan Alexander, PhD\n\n\nIf you have any questions or want to learn more, you can contact me via email: nathan [dot] alexander [at] howard [dot] edu",
+    "crumbs": [
+      "Institute information",
+      "Facilitator"
+    ]
+  }
+]
