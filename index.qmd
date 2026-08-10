@@ -8,15 +8,15 @@ institute:
 
 Thank you for joining us. This site is to support your learning during this Quantitative Section of the *2026 Howard University ELPS Methods and Data Institute*. My name is [Professor Nathan Alexander](about.qmd){target="_blank"} and I will be today's facilitator.
 
-This workshop is about quantitative data collection and analysis. For this course, I will take a Computational Studies in Education (CSIE) approach. CSIE is an interdisciplinary field that uses computational methods — like data analysis, modeling, and machine learning — to study how people learn, behave, and interact in social and educational contexts. At its core, it blends ideas from education, the social sciences, and computer science.
+Today's workshop is about quantitative data collection and analysis. 
 
-Instead of relying only on traditional paper-based methods that focus on small-scale surveys or interviews, this field works with large-scale and complex data for:
+For this workshop, I will take a Computational Studies in Education (CSIE) approach. CSIE is an interdisciplinary field that uses computational methods — like data analysis, modeling, and machine learning — to study how people learn, behave, and interact in social and educational contexts. At its core, it blends ideas from education, the social sciences, and computer science.
 
-- Analyzing student performance data from online learning platforms
-- Studying social behavior through social media or digital interactions
-- Modeling how ideas spread in classrooms or communities
+Instead of relying only on traditional paper-based methods that focus on small-scale surveys or interviews, computational studies uses data to drawn various conclusions that extend beyond what is taught in most introductory and intermediate courses in statistics. In particular, this field works with large-scale and complex data when engage in quantitative analysis.
 
-Given our time constraints today, we'll focus on a few key foundations.
+Given our education focus, we'll focus on survey methods and I'll introduce some interesting tools and methods for computational text analysis -- which, with time and care, can be applied to your interviews and focus groups.
+
+For today's institute, we will use an alternative to SPSS known as *R*. The software platform is free and online, meaning you will not need to download anything to your computer. However, if you'd like to get the software set up locally, instructions are [here](computing.qmd){target="_blank"}.
 
 ## Learning Outcomes
 
@@ -32,8 +32,9 @@ By the end of this workshop, you will be able to:
 
 | Part | Topic                          | Duration   | Time            |
 |------|--------------------------------|------------|-----------------|
-|      | Welcome & site orientation     | 15 minutes | 9:45–10:00 AM    |
-|      | Tech break                     | 10 minutes | 10:00–10:10 AM    |
+|      | Introductions & site orientation     | 10 minutes | 10:00–10:10 AM    |
+|      | Tech setup                     | 15 minutes | 10:10–10:25 AM    |
+|      | Tech break (optional support)                   | 5 minutes | 10:25–10:30 AM    |
 | 1    | [Getting started in R and Posit](parts/part01.qmd) | 30 minutes | 5:10–5:40 PM    |
 |      | Break                          | 5 minutes  | 5:40–5:45 PM    |
 | 2    | [Conducting a literature scan](parts/part02.qmd) | 15 minutes | 5:45–6:00 PM    |
