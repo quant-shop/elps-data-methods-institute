@@ -1,6 +1,6 @@
 ---
-title: "Part 3: Working with large-scale data"
-subtitle: "Intro to Computational Studies in Education and the Social Sciences"
+title: "Part 3: Quantitative Data Analysis"
+subtitle: "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute"
 author: "Nathan Alexander, PhD"
 institute: 
   - "School of Education"
@@ -14,7 +14,7 @@ format:
     smaller: false
     slide-number: c/t #< collapsted/total
     logo: "../img/howard-logo.jpg"
-    footer: "[Workshop GitHub](https://github.com/quant-shop/intro-comp-educ-soc/)"
+    footer: "[Workshop GitHub](https://quant-shop.github.io/elps-data-methods-institute/)"
     toc: false
     echo: true
     incremental: false
@@ -192,3 +192,8 @@ We can create variables that answer educational questions.
 str(district_clean)
 # what kinds of questions might you answer with this data set?
 ```
+
+## Recommended readings
+
+Knaflic, C. N. (2015). *Storytelling with data: A data visualization guide for business professionals*. Wiley.
+

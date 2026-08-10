@@ -1,6 +1,6 @@
 ---
-title: "Part 1: Getting started"
-subtitle: "Intro to Computational Studies in Education and the Social Sciences"
+title: "Part 1: Getting started in R and Posit"
+subtitle: "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute"
 author: "Nathan Alexander, PhD"
 institute: 
   - "School of Education"
@@ -14,7 +14,7 @@ format:
     smaller: false
     slide-number: c/t #< collapsted/total
     logo: "../img/howard-logo.jpg"
-    footer: "[Workshop GitHub](https://github.com/quant-shop/intro-comp-educ-soc/)"
+    footer: "[Workshop GitHub](https://quant-shop.github.io/elps-data-methods-institute/)"
     toc: false
     echo: true
     incremental: false
@@ -26,7 +26,7 @@ editor_options:
 
 ```{r setup, include=F, warning=F, message=F}
 library(here)
-here::i_am(part01.qmd)
+here::i_am("part01.qmd")
 ```
 
 ## Using Posit Cloud
@@ -367,3 +367,17 @@ y
 ```
 
 ------------------------------------------------------------------------
+
+## Recommended readings
+
+Baumer, B. S., Kaplan, D. T., & Horton, N. J. (2017). *Modern data science with R*. Chapman and Hall/CRC.
+
+Grolemund, G., & Wickham, H. (2017). *R for data science: Import, tidy, transform, visualize, and model data*. O’Reilly Media. [https://r4ds.had.co.nz/](https://r4ds.had.co.nz/){target="_blank"}
+
+Peng, R. D. (2016). *R programming for data science*. Leanpub. [https://bookdown.org/rdpeng/rprogdatascience/](https://bookdown.org/rdpeng/rprogdatascience/){target="_blank"}
+
+RStudio Education (n.d.). Learning R for Beginners. Online. [https://education.rstudio.com/learn/beginner/](https://education.rstudio.com/learn/beginner/){target="_blank"}
+
+Wickham, H. (2019). *Advanced R* (2nd ed.). Chapman and Hall/CRC. [https://adv-r.hadley.nz/](https://adv-r.hadley.nz/){target="_blank"}
+
+

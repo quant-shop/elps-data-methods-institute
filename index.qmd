@@ -32,28 +32,11 @@ By the end of this workshop, you will be able to:
 
 | Part | Topic                          | Duration   | Time            |
 |------|--------------------------------|------------|-----------------|
-|      | Introductions & site orientation     | 10 minutes | 10:00–10:10 AM    |
-|      | Tech setup                     | 15 minutes | 10:10–10:25 AM    |
-|      | Tech break (optional support)                   | 5 minutes | 10:25–10:30 AM    |
-| 1    | [Getting started in R and Posit](parts/part01.qmd) | 30 minutes | 5:10–5:40 PM    |
-|      | Break                          | 5 minutes  | 5:40–5:45 PM    |
-| 2    | [Conducting a literature scan](parts/part02.qmd) | 15 minutes | 5:45–6:00 PM    |
-|      | Break                          | 5 minutes  | 6:00–6:05 PM    |
-| 3    | [Working with large-scale data](parts/part03.qmd)  | 45 minutes | 6:05–6:50 PM    |
-|      | Q&A                            | 10 minutes | 6:50–7:00 PM    |
-
-## Recommended readings
-
-Baumer, B. S., Kaplan, D. T., & Horton, N. J. (2017). *Modern data science with R*. Chapman and Hall/CRC.
-
-Grolemund, G., & Wickham, H. (2017). *R for data science: Import, tidy, transform, visualize, and model data*. O’Reilly Media. [https://r4ds.had.co.nz/](https://r4ds.had.co.nz/){target="_blank"}
-
-Knaflic, C. N. (2015). *Storytelling with data: A data visualization guide for business professionals*. Wiley.
-
-Peng, R. D. (2016). *R programming for data science*. Leanpub. [https://bookdown.org/rdpeng/rprogdatascience/](https://bookdown.org/rdpeng/rprogdatascience/){target="_blank"}
-
-RStudio Education (n.d.). Learning R for Beginners. Online. [https://education.rstudio.com/learn/beginner/](https://education.rstudio.com/learn/beginner/){target="_blank"}
-
-Wickham, H. (2019). *Advanced R* (2nd ed.). Chapman and Hall/CRC. [https://adv-r.hadley.nz/](https://adv-r.hadley.nz/){target="_blank"}
-
-
+|      | Introductions & site orientation     | 10 minutes | 10:00–10:10 AM    |   |
+| 1    | [Getting started in R and Posit](parts/part01.qmd) | 30 minutes | 10:10–10:40 AM    |
+|      | Tech break                          | 5 minutes  | 10:40–10:45 AM    |
+| 2    | [Quantitative Data Collection](parts/part02.qmd) | 45 minutes | 10:45–11:30 AM    |
+|      | Break                          | 30 minutes  | 11:30 AM – 12:00 PM    |
+| 3    | [Quantitative Data Analysis](parts/part03.qmd)  | 60 minutes | 12:00 - 1:00 PM    |
+|      | Lunch Break                            | 30 minutes | 1:00–1:30 PM    |
+| 4    | [Working Session and Q&A](parts/part04.qmd)  | 90 minutes | 1:30 - 3:00 PM    |

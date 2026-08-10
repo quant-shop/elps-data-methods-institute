@@ -1,0 +1,35 @@
+---
+title: "Part 4: Working Session and Q&A"
+subtitle: "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute"
+author: "Nathan Alexander, PhD"
+institute: 
+  - "School of Education"
+  - "Center for Applied Data Science and Analytics"
+format: 
+  html: default
+  revealjs:
+    output-file: part04-slides.html
+    height: 900
+    width: 1600
+    smaller: false
+    slide-number: c/t #< collapsted/total
+    logo: "../img/howard-logo.jpg"
+    footer: "[Workshop GitHub](https://quant-shop.github.io/elps-data-methods-institute/)"
+    toc: false
+    echo: true
+    incremental: false
+geometry: margin=1.0in
+editor_options:
+  markdown:
+    wrap: sentence
+---
+
+```{r setup, include=F, warning=F, message=F}
+library(here)
+here::i_am("part04.qmd")
+```
+
+Text goes here.
+
+## Recommended readings
+
