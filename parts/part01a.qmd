@@ -73,13 +73,14 @@ Discuss:
 3. Whose perspectives might be missing if the survey is distributed only by email?
 4. What would count as an unethical use of the findings?
 
+
 ## Quantification
 
 - **Quantification** is the process of representing concepts, experiences, or events with numbers or categories that can be analyzed.
 
 - Quantification can make patterns visible, but it can also obscure context. 
 
-    -- For example, a suspension count may tell us how often suspensions occur, but it does not automatically explain why they occurred, how rules were enforced, or how students experienced the process.
+  -- For example, a suspension count may tell us how often suspensions occur, but it does not automatically explain why they occurred, how rules were enforced, or how students experienced the process.
 
 - Seminal articles on quantification have informed different perspectives of quantification, such as [Zuberi's "Deracializing social statistics: Problems in the quantification of race"](https://www.jstor.org/stable/1049479){target="_blank"}.
 
@@ -111,7 +112,6 @@ Researchers must decide how to **operationalize**: that is, translate a concept 
 - Could the measure reinforce stereotypes or harm a community?
 - What contextual information is needed to interpret the numbers responsibly?
 
-
 ## Sample concept to survey quantifications
 
 | Concept | Possible measure | Example survey item |
@@ -122,10 +122,63 @@ Researchers must decide how to **operationalize**: that is, translate a concept 
 | Racial climate | Agreement scale | “Students from different racial and ethnic backgrounds are treated fairly at this school.” |
 | Exclusionary discipline | Administrative-record count | Number of suspensions during an academic year |
 
+---
+
+### Types of studies and sampling strategies
+
+The methods used to collect sample data for statistical analysis is extremely important.
+
+If sample data are not collected appropriately, resulting statistical analyses will be futile.
+
+As a result, planning a study by identifying *research questions*, the *population* and *sample* of interest, and selecting the appropriate *research method(s)* that will be used to *analyze data* that is collected are all essential parts in the statistical data analysis process.
+
+---
+
+#### Understanding experimental and observational study designs
+
+There are many different types of research studies.
+
+Some studies use non-traditional methods (such as oral traditions) to collect data, while others focus on more traditional methods (such as surveys) to analyze data on a sample or a population.
+
+These data collection methods produce a set of observations upon which statistical analyses can be applied. We consider two core study designs in statistical data analysis: *experimental* studies and *observational* studies.
+
+---
+
+::: callout-DEFINITIONS
+**Experimental study**: In an experimental study, a *treatment* is applied to a sample of interest to observe its effects. There is generally a control group and a treatment group used to understand the effects of the treatment. Individual observations are referred to as experimental units whereas studies involving humans are generally defined as study subjects.
+
+**Observational study**: In an observational study, specific characteristics of a sample or population are observed and measured but individual observations or subjects of study are not influenced or modified in any way.
+:::
+
+---
+
+##### Three types of observational studies
+
+::: {.callout-caution icon="false"}
+## **DEFINITIONS**: Types of studies
+
+**Retrospective study**: In a retrospective study, we go back in time to collect data over some past period.
+
+**Cross-sectional study**: In a cross-sectional study, data are collected and measured at one point in time.
+
+**Prospective study**: In a prospective study, we set up a study to go forward in time and observe groups sharing common factors.
+:::
+
+---
+
+##### Identify and describe the different sampling methods
+
+There are two broad categories of selecting members of a population to generate sample data:
+
+- Probability sampling
+
+- Non-probability sampling
+
+Within these two broad categories are other methods based on the needs of the study. Each methods is used to support statistical data analysis with some methods providing stronger evidence than others.
 
 ## Sampling data
 
-Most researchers cannot collect data from every member of a population. Instead, they collect data from a **sample** and use that information to describe or learn about a broader population.
+Most researchers cannot collect data from every member of a population. Instead, they collect data from a **sample** and use that information to describe or learn about a broader population. This is non-probability sampling.
 
 - **Population:** The complete group a researcher wants to understand
 - **Sampling frame:** The list, system, or source from which the sample is selected
