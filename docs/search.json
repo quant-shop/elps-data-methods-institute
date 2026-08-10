@@ -4,7 +4,7 @@
     "href": "data.html",
     "title": "Datasets",
     "section": "",
-    "text": "You can view or download the datasets below:\n\n\n\nDataset\nDescription\nView\nDownload\n\n\n\n\nClosed Public Schools\nRecords of closed public schools\nView\nDownload\n\n\nDC Public Schools Assessment Results\nStudent assessment performance data\nView\nDownload\n\n\nHBCU Data\nData on Historically Black Colleges & Universities\nView\nDownload\n\n\nIndependent Schools\nPrivate and independent school data\nView\nDownload\n\n\nData on U.S. Presidents\nU.S. president-related dataset\nView\nDownload\n\n\nYahoo! Policing Data\nData related to respondent’s beliefs about police treating Black and while people the same\nView\nDownload\n\n\nRacism in STEM Bibliometric Data\nText-based dataset on racism in STEM education journals\nView\nDownload\n\n\nState District Data\nDistrict-level state data\nView\nDownload\n\n\nUS State Data\nState-level dataset\nView\nDownload",
+    "text": "You can view or download the datasets below:\n\n\n\nDataset\nDescription\nView\nDownload\n\n\n\n\nClosed Public Schools\nRecords of closed public schools\nView\nDownload\n\n\nDC Public Schools Assessment Results\nStudent assessment performance data\nView\nDownload\n\n\nHBCU Data\nData on Historically Black Colleges & Universities\nView\nDownload\n\n\nIndependent Schools\nPrivate and independent school data\nView\nDownload\n\n\nData on U.S. Presidents\nU.S. president-related dataset\nView\nDownload\n\n\nYahoo! Policing Data\nData related to respondents’ beliefs about whether police treat Black and White people the same\nView\nDownload\n\n\nRacism in STEM Bibliometric Data\nText-based dataset on racism in STEM education journals\nView\nDownload\n\n\nState District Data\nDistrict-level state data\nView\nDownload\n\n\nUS State Data\nState-level dataset\nView\nDownload",
     "crumbs": [
       "Institute information",
       "Sample data"
@@ -806,5 +806,12 @@
       "Templates",
       "Full sample workflow"
     ]
+  },
+  {
+    "objectID": "data-viewer.html",
+    "href": "data-viewer.html",
+    "title": "Dataset Viewer",
+    "section": "",
+    "text": "Loading dataset…"
   }
 ]

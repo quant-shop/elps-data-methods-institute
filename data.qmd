@@ -5,13 +5,13 @@ title: "Datasets"
 You can view or download the datasets below:
 
 | Dataset | Description | View | Download |
-|---------------|-----------------|--------------------------|---------------|
-| Closed Public Schools | Records of closed public schools | [View](data/Closed_Public_Schools.csv){target="_blank"} | [Download](data/Closed_Public_Schools.csv){download=""} |
-| DC Public Schools Assessment Results | Student assessment performance data | [View](data/DC_Public_Schools_Student_Assessment_Results.csv){target="_blank"} | [Download](data/DC_Public_Schools_Student_Assessment_Results.csv){download=""} |
-| HBCU Data | Data on Historically Black Colleges & Universities | [View](data/hbcu_data.csv){target="_blank"} | [Download](data/hbcu_data.csv){download=""} |
-| Independent Schools | Private and independent school data | [View](data/Independent_Schools.csv){target="_blank"} | [Download](data/Independent_Schools.csv){download=""} |
-| Data on U.S. Presidents | U.S. president-related dataset | [View](data/president.csv){target="_blank"} | [Download](data/president.csv){download=""} |
-| Yahoo! Policing Data | Data related to respondent's beliefs about police treating Black and while people the same | [View](data/race_justice.csv){target="_blank"} | [Download](data/race_justice.csv){download=""} |
-| Racism in STEM Bibliometric Data | Text-based dataset on racism in STEM education journals | [View](data/racism-in-stem.txt){target="_blank"} | [Download](data/racism-in-stem.txt){download=""} |
-| State District Data | District-level state data | [View](data/state-district-data.csv){target="_blank"} | [Download](data/state-district-data.csv){download=""} |
-| US State Data | State-level dataset | [View](data/us-state-data.csv){target="_blank"} | [Download](data/us-state-data.csv){download=""} |
+|---|---|---|---|
+| Closed Public Schools | Records of closed public schools | [View](data-viewer.qmd?dataset=closed-public-schools) | [Download](data/Closed_Public_Schools.csv){download=""} |
+| DC Public Schools Assessment Results | Student assessment performance data | [View](data-viewer.qmd?dataset=dc-assessment-results) | [Download](data/DC_Public_Schools_Student_Assessment_Results.csv){download=""} |
+| HBCU Data | Data on Historically Black Colleges & Universities | [View](data-viewer.qmd?dataset=hbcu-data) | [Download](data/hbcu_data.csv){download=""} |
+| Independent Schools | Private and independent school data | [View](data-viewer.qmd?dataset=independent-schools) | [Download](data/Independent_Schools.csv){download=""} |
+| Data on U.S. Presidents | U.S. president-related dataset | [View](data-viewer.qmd?dataset=president-data) | [Download](data/president.csv){download=""} |
+| Yahoo! Policing Data | Data related to respondents' beliefs about whether police treat Black and White people the same | [View](data-viewer.qmd?dataset=yahoo-policing-data) | [Download](data/race_justice.csv){download=""} |
+| Racism in STEM Bibliometric Data | Text-based dataset on racism in STEM education journals | [View](data-viewer.qmd?dataset=racism-in-stem) | [Download](data/racism-in-stem.txt){download=""} |
+| State District Data | District-level state data | [View](data-viewer.qmd?dataset=state-district-data) | [Download](data/state-district-data.csv){download=""} |
+| US State Data | State-level dataset | [View](data-viewer.qmd?dataset=us-state-data) | [Download](data/us-state-data.csv){download=""} |

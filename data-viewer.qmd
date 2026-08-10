@@ -1,0 +1,133 @@
+---
+title: "Dataset Viewer"
+format:
+  html:
+    toc: false
+    page-layout: full
+---
+
+<div id="dataset-viewer">
+  <p id="status">Loading dataset...</p>
+  <div id="table-container"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+<script>
+const datasets = {
+  "closed-public-schools": {
+    title: "Closed Public Schools",
+    file: "data/Closed_Public_Schools.csv"
+  },
+  "dc-assessment-results": {
+    title: "DC Public Schools Assessment Results",
+    file: "data/DC_Public_Schools_Student_Assessment_Results.csv"
+  },
+  "hbcu-data": {
+    title: "HBCU Data",
+    file: "data/hbcu_data.csv"
+  },
+  "independent-schools": {
+    title: "Independent Schools",
+    file: "data/Independent_Schools.csv"
+  },
+  "president-data": {
+    title: "Data on U.S. Presidents",
+    file: "data/president.csv"
+  },
+  "yahoo-policing-data": {
+    title: "Yahoo! Policing Data",
+    file: "data/race_justice.csv"
+  },
+  "racism-in-stem": {
+    title: "Racism in STEM Bibliometric Data",
+    file: "data/racism-in-stem.txt"
+  },
+  "state-district-data": {
+    title: "State District Data",
+    file: "data/state-district-data.csv"
+  },
+  "us-state-data": {
+    title: "US State Data",
+    file: "data/us-state-data.csv"
+  }
+};
+
+const parameters = new URLSearchParams(window.location.search);
+const datasetId = parameters.get("dataset");
+const dataset = datasets[datasetId];
+
+const status = document.getElementById("status");
+const container = document.getElementById("table-container");
+
+if (!dataset) {
+  status.textContent = "Dataset not found.";
+} else {
+  document.title = dataset.title;
+  status.textContent = `Loading ${dataset.title}...`;
+
+  Papa.parse(dataset.file, {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function(results) {
+      const rows = results.data;
+      const columns = results.meta.fields;
+
+      if (!rows.length || !columns.length) {
+        status.textContent = "This dataset is empty or could not be read.";
+        return;
+      }
+
+      status.innerHTML = `
+        <h2>${dataset.title}</h2>
+        <p>
+          Showing ${rows.length.toLocaleString()} rows and
+          ${columns.length.toLocaleString()} columns.
+          <a href="${dataset.file}" download>Download the CSV</a>.
+        </p>
+      `;
+
+      const table = document.createElement("table");
+      table.className = "table table-striped table-hover table-sm";
+
+      const thead = document.createElement("thead");
+      const headerRow = document.createElement("tr");
+
+      columns.forEach(function(column) {
+        const cell = document.createElement("th");
+        cell.textContent = column;
+        headerRow.appendChild(cell);
+      });
+
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+
+      rows.forEach(function(row) {
+        const tableRow = document.createElement("tr");
+
+        columns.forEach(function(column) {
+          const cell = document.createElement("td");
+          cell.textContent = row[column] ?? "";
+          tableRow.appendChild(cell);
+        });
+
+        tbody.appendChild(tableRow);
+      });
+
+      table.appendChild(tbody);
+
+      const wrapper = document.createElement("div");
+      wrapper.style.overflowX = "auto";
+      wrapper.appendChild(table);
+
+      container.appendChild(wrapper);
+    },
+    error: function() {
+      status.textContent = "The dataset could not be loaded.";
+    }
+  });
+}
+</script>
