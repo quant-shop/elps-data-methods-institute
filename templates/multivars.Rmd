@@ -1,0 +1,405 @@
+---
+title: "Analyzing Multiple Variables"
+author: "FirstName LastName"
+output: html_document
+editor_options:
+    chunk_output_type: console
+---
+
+```{r setup, include=F}
+knitr:: opts_chunk$set(echo = TRUE)
+```
+
+There are multiple options when conducting the analysis of multiple variables (i.e., more than two variables). In this file, I provide some very basic code to help you get started on your analysis for your paper on analyzing the relationship between multiple variables.
+
+# Libraries and packages
+
+Load the libraries we needed. Be sure to `install.packages()` where needed.
+
+```{r, message=F, warning=F}
+# again, remember to install necessary packages first
+# install.packages("mvnormtest)
+
+# load libraries
+library(ggplot2)
+library(dplyr)
+library(corrplot)
+library(car)
+library(lmtest)
+library(mvnormtest)
+library(ggpubr)  # combined plots
+library(vcd)     # mosaic plots
+```
+
+## Load sample data from github
+
+We'll use the gender pay gap data again that I have prepared.
+
+```{r, message=F, warning=F}
+pay_gap_data <- read.csv("https://raw.githubusercontent.com/data-202/sp25/refs/heads/master/data/pay_data.csv")
+```
+
+# Exploratory analysis
+
+```{r, message=F, warning=F}
+# view the structure of your data
+str(pay_gap_data)
+
+# view the top and bottom of your data
+head(pay_gap_data)
+tail(pay_gap_data)
+
+# gather counts for your categorical data
+table(pay_gap_data$gender)
+table(pay_gap_data$job_title)
+
+# gather descriptive statistics for your numeric variables
+pay_gap_data %>%
+  select(years_experience, annual_salary) %>% 
+  summary()
+```
+
+## Anlayzing bivariate relationships
+
+We then want to analyze the bivariate relationship between each of the variables in our model.
+
+### Numeric-Numeric relationships
+
+We'll start with a scatter plot to visualize the relationship between the numeric variables.
+
+```{r, message=F, warning=F}
+pairs(pay_gap_data[, c("annual_salary", "years_experience")],
+      main = "Pairwise Scatterplot Matrix")
+```
+
+```{r, message=F, warning=F}
+ggplot(pay_gap_data, aes(x = years_experience, y = annual_salary)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Experience vs Salary Relationship",
+       x = "Years of Experience", y = "Annual Salary")
+```
+
+```{r, message=F, warning=F}
+# check correlation value
+cor.test(pay_gap_data$annual_salary, pay_gap_data$years_experience)
+```
+
+### Categorical-Numeric relationships
+
+```{r, message=F, warning=F}
+## Gender vs Salary
+ggplot(pay_gap_data, aes(x = gender, 
+                         y = annual_salary, 
+                         fill = gender)) +
+  geom_boxplot() +
+  labs(title = "Salary Distribution by Gender")
+```
+
+```{r, message=F, warning=F}
+## Job Title vs Salary (sorted by median salary)
+pay_gap_data %>%
+  mutate(job_title = reorder(job_title, annual_salary, median)) %>%
+  ggplot(aes(x = job_title, y = annual_salary, fill = job_title)) +
+  geom_boxplot() +
+  coord_flip() +  # Better readability for long job titles
+  labs(title = "Salary Distribution by Job Title") +
+  theme(legend.position = "none")
+```
+
+```{r, message=F, warning=F}
+## Job Title vs Experience
+pay_gap_data %>%
+  mutate(job_title = reorder(job_title, years_experience, median)) %>%
+  ggplot(aes(x = job_title, y = years_experience, fill = job_title)) +
+  geom_boxplot() +
+  coord_flip() +
+  labs(title = "Experience Distribution by Job Title") +
+  theme(legend.position = "none")
+```
+
+### Categorical-Categorical relationship
+
+```{r, message=F, warning=F}
+# bar chart of the categorical relationships
+ggplot(pay_gap_data, aes(x = job_title, fill = gender)) +
+  geom_bar(position = "dodge") +
+  coord_flip() +
+  labs(title = "Gender Distribution Across Job Titles",
+       x = "Job Title", y = "Count") +
+  theme_minimal() +
+  theme(axis.text.y = element_text(angle = 0, hjust = 1))
+```
+
+We can then conduct a chi-square test to see if there is a relation.
+
+```{r, message=F, warning=F}
+## Chi-square test
+chisq.test(pay_gap_data$gender, pay_gap_data$job_title)
+```
+
+## Visualizing the combined relationships
+
+```{r, message=F, warning=F}
+## Salary ~ Experience faceted by Gender
+ggplot(pay_gap_data, aes(x = years_experience, y = annual_salary)) +
+  geom_point(aes(color = gender)) +
+  geom_smooth(method = "lm") +
+  facet_wrap(~gender) +
+  labs(title = "Experience-Salary Relationship by Gender")
+```
+
+```{r, message=F, warning=F}
+## Salary ~ Experience colored by Job Title
+ggplot(pay_gap_data, aes(x = years_experience, y = annual_salary, color = job_title)) +
+  geom_point(alpha = 0.7) +
+  labs(title = "Experience-Salary Relationship by Job Title")
+```
+
+------------------------------------------------------------------------
+
+# Multiple Variable Analysis
+
+Multiple variable analysis is a statistical technique that examines relationships between three or more variables simultaneously. The multiple variable analysis technique involves analyzing how multiple independent variables relate to one or more dependent variables, aiming to understand the interdependence of these variables and their impact on each other.
+
+## Research questions
+
+RQ1: Does gender, job title, and years of experience significantly impact an individual's annual salary?
+
+RQ2: How much variance in salary can be explained by gender and job title after controlling for years of experience?
+
+```{r, echo=F}
+library(DiagrammeR)
+
+DiagrammeR::grViz("
+digraph relationships {
+  graph [layout = dot, rankdir = LR]
+
+  # Define nodes
+  node [shape = ellipse, style = filled]
+  X1 [label = 'gender (X1)', color = lightblue]
+  X2 [label = 'job title (X2)', color = lightblue]
+  X3 [label = 'experience (X3)', color = lightblue]
+  Y [label = 'annual salary (Y)', fillcolor = lightblue, fontcolor = black]
+
+  # Define edges (relationships)
+  X1 -> Y
+  X2 -> Y
+  X3 -> Y
+}
+")
+
+```
+
+## Base statistical models
+
+Below, I provide the base statistical models to answer the listed research questions. However, be reminded that you should utilize your theoretical framework to drive your analysis. The most important component of our modeling here are the post-hoc tests of our assumptions.
+
+### Research Question 1
+
+RQ1: Does gender, job title, and years of experience significantly impact an individual's annual salary?
+
+```{r, message=F, warning=F}
+# Fit the model
+model <- lm(annual_salary ~ gender + job_title + years_experience, data = pay_gap_data)
+
+# Get the summary of the model
+summary(model)
+```
+
+#### Checking Assumptions
+
+We then want to check the assumptions for our multiple linear regression model.
+
+We use the `which` command here to call for specific results.
+
+```{r, message=F, warning=F}
+# Linearity and homoscedasticity
+plot(model, which = 1)
+```
+
+```{r, message=F, warning=F}
+# Normality of residuals
+plot(model, which = 2)
+```
+
+```{r, message=F, warning=F}
+# Influential points
+plot(model, which = 4)
+```
+
+```{r, message=F, warning=F}
+# Multicollinearity
+vif(model)
+```
+
+```{r, message=F, warning=F}
+# Heteroscedasticity test
+bptest(model)
+```
+
+### Research Question 2
+
+RQ2: How much variance in salary can be explained by gender and job title after controlling for years of experience?
+
+```{r, message-F, warning=F}
+# Extract R-squared values
+r_squared_full <- model$r.squared
+
+r_squared_experience <- 
+  summary(lm(annual_salary ~ years_experience, 
+             data = pay_gap_data))$r.squared
+
+# Calculate the additional variance explained
+variance.model <- r_squared_full - r_squared_experience
+variance.model
+```
+
+### Additional tests to examine differences by groupings
+
+```{r, message=F, warning=F}
+## ANOVA: Job Title vs Salary
+summary(aov(annual_salary ~ job_title, data = pay_gap_data))
+```
+
+```{r, message=F, warning=F}
+## Kruskal-Wallis test (a non-parametric alternative)
+kruskal.test(annual_salary ~ job_title, data = pay_gap_data)
+```
+
+```{r, message=F, warning=F}
+## ANOVA for Gender Differences (3 groups)
+# For normally distributed data
+gender_salary_aov <- aov(annual_salary ~ gender, data = pay_gap_data)
+summary(gender_salary_aov)
+
+gender_experience_aov <- aov(years_experience ~ gender, data = pay_gap_data)
+summary(gender_experience_aov)
+
+## Post-hoc pairwise comparisons (if ANOVA is significant)
+# Tukey's Honest Significant Differences
+TukeyHSD(gender_salary_aov)
+TukeyHSD(gender_experience_aov)
+
+## Non-parametric alternative (Kruskal-Wallis)
+kruskal.test(annual_salary ~ gender, data = pay_gap_data)
+kruskal.test(years_experience ~ gender, data = pay_gap_data)
+
+## Pairwise Wilcoxon Rank Sum tests with Bonferroni correction
+pairwise.wilcox.test(pay_gap_data$annual_salary, pay_gap_data$gender,
+                     p.adjust.method = "bonferroni")
+pairwise.wilcox.test(pay_gap_data$years_experience, pay_gap_data$gender,
+                     p.adjust.method = "bonferroni")
+
+## Enhanced gender-salary plot
+ggplot(pay_gap_data, aes(x = gender, y = annual_salary, fill = gender)) +
+  geom_boxplot() +
+  geom_jitter(width = 0.2, alpha = 0.4) +
+  stat_compare_means(method = "anova", label.y = max(pay_gap_data$annual_salary)*1.1) +
+  labs(title = "Salary Distribution Across Gender Groups",
+       subtitle = "Three-group comparison with ANOVA results")
+
+## Faceted experience-salary relationship
+ggplot(pay_gap_data, aes(x = years_experience, y = annual_salary)) +
+  geom_point(aes(color = gender)) +
+  geom_smooth(method = "lm") +
+  facet_wrap(~gender, ncol = 3) +
+  labs(title = "Experience-Salary Relationship by Gender Group")
+```
+
+------------------------------------------------------------------------
+
+# Multivariate Analysis
+
+Multivariate analysis and multiple variable analysis are often confused, but they have a key distinction. Multivariate analysis specifically examines multiple dependent or outcome variables simultaneously, while multiple variable analysis (also called multivariable analysis) focuses on a single outcome variable with multiple independent variables.
+
+## Research question
+
+RQ1: Do gender and job title jointly influence both salary and years of experience?
+
+RQ2: Are there significant differences in salary distributions across job titles when accounting for gender and experience?
+
+```{r, echo=F}
+grViz("
+  digraph variables_diagram {
+    graph [rankdir = LR]
+    
+    node [shape = ellipse, style = filled, fillcolor = lightblue]
+    gender [label = 'Gender']
+    job_title [label = 'Job Title']
+    
+    node [shape = ellipse, style = filled, fillcolor = lightyellow]
+    salary [label = 'Annual Salary']
+    experience [label = 'Years of Experience']
+    
+    gender -> salary
+    gender -> experience
+    job_title -> salary
+    job_title -> experience
+  }
+")
+```
+
+### MANOVA
+
+RQ1: Do gender and job title jointly influence both salary and years of experience?
+
+To answer RQ1, we'll first run a multiple analysis of variance (MANOVA) on our data.
+
+```{r, message=F, warning=F}
+manova_result <- manova(cbind(annual_salary, years_experience) ~ gender + job_title, data = pay_gap_data)
+
+summary(manova_result)
+```
+
+```{r, message=F, warning=F}
+# Perform univariate ANOVAs for each dependent variable
+summary.aov(manova_result)
+```
+
+```{r, message=F, warning=F}
+# Post-hoc tests for job title (if significant)
+TukeyHSD(aov(annual_salary ~ job_title, data = pay_gap_data))
+TukeyHSD(aov(years_experience ~ job_title, data = pay_gap_data))
+```
+
+#### Check MANOVA assumptions
+
+```{r, message=F, warning=F}
+# Multivariate normality
+mshapiro.test(t(model.matrix(manova_result)[, -1]))
+```
+
+```{r, message=F, warning=F}
+# Homogeneity of covariance matrices
+leveneTest(annual_salary ~ gender * job_title, data = pay_gap_data)
+leveneTest(years_experience ~ gender * job_title, data = pay_gap_data)
+```
+
+### Visual of the results
+
+```{r, message=F, warning=F}
+ggplot(pay_gap_data, aes(x = job_title, y = annual_salary, fill = gender)) +
+  geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(title = "Salary Distribution by Job Title and Gender",
+       x = "Job Title", y = "Annual Salary")
+
+ggplot(pay_gap_data, aes(x = job_title, y = years_experience, fill = gender)) +
+  geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(title = "Years of Experience Distribution by Job Title and Gender",
+       x = "Job Title", y = "Years of Experience")
+```
+
+RQ2: Are there significant differences in salary distributions across job titles when accounting for gender and experience?
+
+To answer research question two, we'll run some additional analyses.
+
+```{r, message=F, warning=F}
+model_salary <- lm(annual_salary ~ job_title + gender + years_experience, data = pay_gap_data)
+anova(model_salary)
+summary(model_salary)
+```
+
+As noted in class, these are base models to help you consider your analysis. However, your theory should lead all of your work. Please let me know if you have any questions.

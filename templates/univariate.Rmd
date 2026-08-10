@@ -1,0 +1,22 @@
+---
+title: "Univariate analysis"
+author: "FirstName LastName"
+output: html_document
+editor_options:
+    chunk_output_type: console
+---
+
+```{r setup, include=F}
+knitr:: opts_chunk$set(echo = TRUE)
+```
+
+# Libraries and packages
+
+Load the libraries we needed. Be sure to `install.packages()` where needed.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+

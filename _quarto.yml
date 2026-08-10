@@ -50,7 +50,15 @@ website:
         - href: parts/part02.qmd
           text: Part 2  
         - href: parts/part03.qmd
-          text: Part 3  
+          text: Part 3
+    - section: "Templates"
+      contents: 
+        - href: templates/univariate.Rmd
+          text: Univariate analysis
+        - href: templates/bivariate.Rmd
+          text: Bivariate analysis
+        - href: templates/multivars.Rmd
+          text: Three or more variable analysis
           
 format:
   html:

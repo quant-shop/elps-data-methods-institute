@@ -1,5 +1,5 @@
 ---
-title: "DATA 202 - Bivariate analysis"
+title: "Bivariate analysis"
 author: "FirstName LastName"
 output: html_document
 editor_options:
@@ -58,7 +58,6 @@ We'll then conduct a correlation analysis.
 cor.test(pay_gap_data$years_experience, pay_gap_data$annual_salary)
 ```
 
-
 ### Simple linear regression
 
 Given the nature of our variables, we can run a simple linear regression.
@@ -89,7 +88,6 @@ RQ: Is there an association between gender and job title?
 table(pay_gap_data$gender, pay_gap_data$job_title)
 ```
 
-
 ### Chi-square test for independence
 
 ```{r}
@@ -110,7 +108,9 @@ ggplot(pay_gap_data, aes(x = gender, y = annual_salary, fill = gender)) +
 When we mix multiple types of variables, recall that there are additional tests that we can use.
 
 ## Research Question
+
 ### ANOVA: Annual salary differences among genders
+
 ```{r}
 anova_result <- aov(annual_salary ~ gender, data = pay_gap_data)
 ```
@@ -120,6 +120,7 @@ summary(anova_result)
 ```
 
 ### t-test: Salary difference between two genders (e.g., Male vs Female)
+
 ```{r}
 t.test(annual_salary ~ gender, data = pay_gap_data[pay_gap_data$gender %in% c("Male", "Female"),])
 ```
