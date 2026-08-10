@@ -37,34 +37,310 @@ here::i_am("part01a.qmd")
 
 ## What data collection entails
 
+Quantitative data collection is the systematic process of gathering information that can be recorded, organized, counted, compared, and analyzed.
+
+Data collection is more than administering a survey or downloading a spreadsheet. Before collecting data, researchers must make decisions about:
+
+- Who or what they want to study
+- Which questions they want to answer
+- How abstract ideas will be measured
+- Who is included, excluded, or difficult to reach
+- How information will be stored, protected, and shared
+- What conclusions the resulting data can reasonably support
+
+---
+
+A useful workflow is:
+
+$$
+\text{Research question} \rightarrow \text{Population} \rightarrow \text{Measures} \rightarrow \text{Sampling frame} \rightarrow \text{Sample} \rightarrow \text{Analysis}
+$$
+
+At every stage, researchers make choices and those choices affect what the data represent and whose experiences may be absent from the resulting analysis. 
+
+The handoff between theory and method also happens as these choices are made.
+
+---
+
+### Activity: Start with a question
+
+Imagine that an educational leadership program wants to understand students' experiences of belonging in their schools.
+
+Discuss:
+
+1. What is the population of interest?
+2. What information would need to be collected?
+3. Whose perspectives might be missing if the survey is distributed only by email?
+4. What would count as an unethical use of the findings?
+
 ## Quantification
+
+- **Quantification** is the process of representing concepts, experiences, or events with numbers or categories that can be analyzed.
+
+- Quantification can make patterns visible, but it can also obscure context. 
+
+    -- For example, a suspension count may tell us how often suspensions occur, but it does not automatically explain why they occurred, how rules were enforced, or how students experienced the process.
+
+- Seminal articles on quantification have informed different perspectives of quantification, such as [Zuberi's "Deracializing social statistics: Problems in the quantification of race"](https://www.jstor.org/stable/1049479){target="_blank"}.
+
+## Quantification
+
+For example, researchers may be interested in concepts such as:
+
+- School belonging
+- Teacher support
+- Academic opportunity
+- Racial climate
+- Student discipline
+- Access to advanced coursework
+
+These concepts are not directly observed in the same way as height or age. 
+
+
+## Quantification
+
+Researchers must decide how to **operationalize**: that is, translate a concept into observable indicators.
+
+### Questions to ask before measuring
+
+- Who defines the concept?
+- What exactly does this variable represent?
+- Who defined the categories?
+- Do participants understand the question in the same way?
+- Does the measure capture the full experience we care about?
+- Could the measure reinforce stereotypes or harm a community?
+- What contextual information is needed to interpret the numbers responsibly?
+
+
+## Sample concept to survey quantifications
+
+| Concept | Possible measure | Example survey item |
+|---|---|---|
+| School belonging | Agreement scale | “I feel like I am part of this school community.” |
+| Teacher support | Frequency or agreement scale | “My teachers believe I can be successful.” |
+| Access to opportunity | Course enrollment or availability | “Is Advanced Placement Calculus offered at your school?” |
+| Racial climate | Agreement scale | “Students from different racial and ethnic backgrounds are treated fairly at this school.” |
+| Exclusionary discipline | Administrative-record count | Number of suspensions during an academic year |
+
 
 ## Sampling data
 
+Most researchers cannot collect data from every member of a population. Instead, they collect data from a **sample** and use that information to describe or learn about a broader population.
+
+- **Population:** The complete group a researcher wants to understand
+- **Sampling frame:** The list, system, or source from which the sample is selected
+- **Sample:** The individuals, schools, districts, documents, or other units actually included in the study
+- **Respondents:** Sampled people who ultimately provide data
+
+## Sampling data
+
+For example:
+
+| Element | Example |
+|---|---|
+| Research question | How do high school students experience academic advising? |
+| Population | All high school students at a single school |
+| Sampling frame | The high school student enrollment lists |
+| Sample | 500 students randomly selected from that list |
+| Respondents | The students who complete the survey |
+
+---
+
 ### The sample frame
+
+The **sampling frame** is the practical source used to identify and contact members of the target population. Examples include:
+
+- A student enrollment roster
+- A list of school employees
+- A voter-registration list
+- A set of residential addresses
+- An online research panel
+- A list of organizations or institutions
+- Publicly available social-media posts matching a defined criterion
+
+A frame is not automatically the same as the population. For example, an institutional email list may exclude students with outdated contact information, students who have disengaged from the institution, or individuals who have limited internet access.
+
+---
 
 #### Comprehensiveness
 
-#### Probbaility of selection
+A strong sampling frame covers as much of the target population as possible.
+
+Two common concerns are:
+
+- **Undercoverage:** Some members of the target population are absent from the frame
+- **Overcoverage:** The frame includes people who are not part of the target population
+
+For example, a survey of current students using an old enrollment list may include graduates while missing newly enrolled students.
+
+**Prompt:** If you want to study student experiences with remote learning, who might be missing from an email-based survey frame?
+
+---
+
+#### Probability of selection
+
+In a **probability sample**, each eligible unit has a known or estimable, nonzero chance of selection.
+
+Common probability-sampling approaches include:
+
+- **Simple random sampling:** Every unit has the same probability of selection
+- **Systematic sampling:** Select every \(k\)-th unit after a random starting point
+- **Stratified sampling:** Divide the population into groups, then sample within each group
+- **Cluster sampling:** Sample groups, such as schools or classrooms, rather than individuals first
+- **Multistage sampling:** Select units in stages, such as districts, then schools, then students
+
+Probability sampling supports statistical inference because the selection process is documented. It does not guarantee a perfect sample; nonresponse, measurement error, and incomplete frames can still introduce bias.
+
+---
 
 #### Efficiency
 
+Sampling design involves tradeoffs among cost, time, precision, feasibility, and fairness.
+
+For example, it may be efficient to survey one classroom, but that classroom may not represent all students in a school. A stratified sample may require more planning, but it can ensure that smaller groups are adequately represented.
+
+Researchers should ask:
+
+- Which groups must be represented in the study?
+- Which groups may be difficult to reach?
+- What resources are available?
+- What degree of precision is necessary?
+- What harms or burdens could data collection impose?
+
+---
+
 ### Example: Traditionalist view
+
+Suppose a school district asks:
+
+> What percentage of students report that they feel safe at school?
+
+A traditionalist quantitative approach might:
+
+- Define the population as all enrolled students
+- Use the enrollment list as the sampling frame
+- Draw a random sample of students
+- Administer a standardized survey
+- Estimate the percentage of students who report feeling safe
+- Report a margin of error or confidence interval
+
+This approach prioritizes consistency, comparability, and generalization from the sample to the population.
+
+---
 
 ### Example: Deficit view
 
+A deficit-oriented approach might ask:
+
+> Why do students from a particular neighborhood report lower feelings of safety?
+
+The problem is not the use of numbers. The concern is the explanation implied by the question. If researchers immediately attribute differences to students, families, cultures, or neighborhoods, they can overlook unequal school resources, discriminatory discipline, neighborhood disinvestment, violence exposure, or institutional policy.
+
+A more careful researcher would ask:
+
+- What conditions shape students' experiences of safety?
+- How are school rules and disciplinary practices implemented?
+- Are all groups equally protected and heard?
+- What institutional resources are available across schools?
+
+---
+
+
 ### Sampling procedures
+
+Researchers select samples using procedures that fit their research question, population, and practical constraints.
+
+**Quick question**: *What are some sampling procedures that you are familiar with or will be using for your study?*
+
+---
+
+### Sampling procedures
+
+Researchers select samples using procedures that fit their research question, population, and practical constraints.
+
+**Quick question**: *What are some sampling procedures that you are familiar with or will be using for your study?*
+
+Convenience and purposive samples can be useful, especially for exploratory work, program feedback, and hard-to-reach populations. However, researchers should avoid claiming that such samples statistically represent a larger population unless the design supports that conclusion.
+
+---
+
+### Sampling procedures
+
+| Procedure | Description | Example use |
+|---|---|---|
+| Convenience sampling | Recruit people who are easiest to access | An optional workshop exit survey |
+| Simple random sampling | Randomly select individuals from a complete list | Select 200 students from an enrollment roster |
+| Stratified sampling | Sample separately within key groups | Ensure representation across class year or school level |
+| Cluster sampling | Sample groups, then individuals within groups | Randomly select schools, then classrooms |
+| Purposive sampling | Select cases meeting specified criteria | Interview principals serving rural districts |
+| Snowball sampling | Participants recruit additional participants | Reach a hard-to-contact community or professional network |
+
+---
 
 ### Example: Traditionalist view
 
-### Example: Critical theory
+A researcher wants to estimate the proportion of doctoral students who use campus mental-health services. A probability-oriented design could:
+
+1. Obtain a list of currently enrolled doctoral students
+2. Stratify the list by program or enrollment status
+3. Randomly select students within each group
+4. Invite selected students to complete a confidential survey
+5. Calculate weighted estimates if groups were sampled at different rates
+6. Clearly report the response rate, sampling procedure, and limitations
+
+---
+
+### Example: Critical quantification
+
+A critical approach begins by asking not only, ``How can we sample efficiently?" but also:
+
+- Who has power to define the research problem?
+- Who benefits from the data collection?
+- Whose knowledge is treated as credible?
+- Which groups are likely to be excluded by the sampling frame?
+- How will findings be returned to participants and communities?
+- Could the results be used to stigmatize, surveil, or penalize people?
+
+For example, a study of student belonging could involve students in developing survey items, include accessible modes of participation beyond email, report results back to students, and connect findings to institutional action. This does not mean abandoning rigor. It means treating validity, representation, transparency, and accountability as connected concerns.
+
+---
 
 ### Sample design and estimates
 
+A sample design is the plan for selecting units from the population. That design determines what estimates can be made and how confidently they can be interpreted.
+
+For a population quantity such as the proportion of students who feel safe at school, we may use a sample estimate:
+
+$$
+\hat{p} = \frac{\text{Number of sampled respondents reporting safety}}{\text{Number of sampled respondents}}
+$$
+
+The estimate $\hat{p}$ is not automatically the true population value. It is an estimate based on the respondents and the design used to select them.
+
+---
+
+### Sample design and estimates
+
+When interpreting estimates, consider:
+
+- Sampling error: Results would vary somewhat if a different sample were selected
+- Nonresponse: Selected people may not participate
+- Coverage error: Some people may be absent from the sampling frame
+- Measurement error: Questions may be unclear, sensitive, or interpreted differently
+- Weighting: Some samples require weights to reflect unequal probabilities of selection or differential response
+
+**Key idea:** A larger sample is helpful, but sample quality depends on more than sample size. A very large convenience sample can still be biased.
+
 ## Storing data
 
-### Example: Traditionalist view
+Data storage is part of research design, not an afterthought. Researchers have a responsibility to protect participants, document their work, and make appropriate decisions about access and sharing. Good data-management practices include:
 
-### Example: Critical theory
-
-## Recommended readings
+- Store identifiable data securely
+- Separate names or IDs from survey responses when possible
+- Use clear file names and consistent folder structures
+- Maintain a codebook or data dictionary
+- Document how variables were created or changed
+- Limit access to sensitive data
+- Back up files in secure locations
+- Remove or mask identifying information before sharing data
+- Follow institutional review board, institutional, legal, and community requirements

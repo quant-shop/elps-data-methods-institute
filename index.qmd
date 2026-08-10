@@ -27,7 +27,7 @@ By the end of this workshop, you will be able to:
 ## Schedule
 
 | Session | Topic | Duration | Time |
-|--------------|------------------------------|--------------|---------------|
+|---------------|--------------------------|---------------|---------------|
 |  | Introduction & site orientation | 10 minutes | 10:00–10:10 AM |
 | 1a | [Quantitative data collection](parts/part01a.qmd) | 30 minutes | 10:10–10:40 AM |
 |  | Tech break | 5 minutes | 10:40–10:45 AM |

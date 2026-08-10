@@ -59,6 +59,8 @@ website:
           text: Bivariate analysis
         - href: templates/multivars.Rmd
           text: Three or more variable analysis
+        - href: templates/yahoo_data.Rmd
+          text: Full sample workflow
           
 format:
   html:
