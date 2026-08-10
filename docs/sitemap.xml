@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://quant-shop.github.io/elps-data-methods-institute/about.html</loc>
-    <lastmod>2026-08-10T02:27:04.224Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quant-shop.github.io/elps-data-methods-institute/index.html</loc>
-    <lastmod>2026-08-10T02:50:31.117Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part01.html</loc>
-    <lastmod>2026-08-10T02:54:02.477Z</lastmod>
-  </url>
-  <url>
     <loc>https://quant-shop.github.io/elps-data-methods-institute/data.html</loc>
     <lastmod>2026-04-20T20:07:26.711Z</lastmod>
   </url>
@@ -25,12 +13,48 @@
     <lastmod>2025-11-12T23:21:26.701Z</lastmod>
   </url>
   <url>
+    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part01.html</loc>
+    <lastmod>2026-08-10T02:54:02.477Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part01-slides.html</loc>
+    <lastmod>2026-08-10T02:54:02.477Z</lastmod>
+  </url>
+  <url>
     <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part03.html</loc>
     <lastmod>2026-08-10T03:07:33.270Z</lastmod>
   </url>
   <url>
+    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part03-slides.html</loc>
+    <lastmod>2026-08-10T03:07:33.270Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quant-shop.github.io/elps-data-methods-institute/about.html</loc>
+    <lastmod>2026-08-10T02:27:04.224Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quant-shop.github.io/elps-data-methods-institute/index.html</loc>
+    <lastmod>2026-08-10T03:27:30.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quant-shop.github.io/elps-data-methods-institute/computing.html</loc>
+    <lastmod>2026-08-10T03:30:54.401Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part02-slides.html</loc>
+    <lastmod>2026-08-10T03:08:26.534Z</lastmod>
+  </url>
+  <url>
     <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part02.html</loc>
-    <lastmod>2026-08-10T03:05:25.337Z</lastmod>
+    <lastmod>2026-08-10T03:08:26.534Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part04-slides.html</loc>
+    <lastmod>2026-08-10T03:08:27.971Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part04.html</loc>
+    <lastmod>2026-08-10T03:08:27.971Z</lastmod>
   </url>
   <url>
     <loc>https://quant-shop.github.io/elps-data-methods-institute/templates/paper-template/paper2.html</loc>
@@ -39,21 +63,5 @@
   <url>
     <loc>https://quant-shop.github.io/elps-data-methods-institute/templates/bivariate.html</loc>
     <lastmod>2025-05-28T15:09:47.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part01-slides.html</loc>
-    <lastmod>2026-08-10T02:54:02.477Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part04.html</loc>
-    <lastmod>2026-08-10T03:07:07.902Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part04-slides.html</loc>
-    <lastmod>2026-08-10T03:07:07.902Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quant-shop.github.io/elps-data-methods-institute/parts/part03-slides.html</loc>
-    <lastmod>2026-08-10T03:07:33.270Z</lastmod>
   </url>
 </urlset>

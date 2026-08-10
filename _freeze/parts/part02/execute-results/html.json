@@ -1,0 +1,15 @@
+{
+  "hash": "f50432f2e274ea81980399c1d6c85a04",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Part 2: Quantitative Data Collection\"\nsubtitle: \"Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute\"\nauthor: \"Nathan Alexander, PhD\"\ninstitute: \n  - \"School of Education\"\n  - \"Center for Applied Data Science and Analytics\"\nformat: \n  html: default\n  revealjs:\n    output-file: part02-slides.html\n    height: 900\n    width: 1600\n    smaller: false\n    slide-number: c/t #< collapsted/total\n    logo: \"../img/howard-logo.jpg\"\n    footer: \"[Workshop GitHub](https://quant-shop.github.io/elps-data-methods-institute/)\"\n    toc: false\n    echo: true\n    incremental: false\ngeometry: margin=1.0in\neditor_options:\n  markdown:\n    wrap: sentence\n---\n\n\n\n\n\n\n\n\nText goes here.\n\n## Recommended readings\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

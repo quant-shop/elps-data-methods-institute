@@ -1,6 +1,6 @@
 ---
 title: "Part 2: Quantitative Data Collection"
-subtitle: "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute"
+subtitle: "Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute"
 author: "Nathan Alexander, PhD"
 institute: 
   - "School of Education"

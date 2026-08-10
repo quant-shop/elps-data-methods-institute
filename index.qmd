@@ -1,5 +1,5 @@
 ---
-title: "Quantitative Section of the 2026 HUSOE ELPS Methods and Data Institute"
+title: "Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute"
 author: "Nathan Alexander, PhD"
 institute: 
   - "Howard University School of Education"
@@ -10,11 +10,7 @@ Thank you for joining us. This site is to support your learning during this Quan
 
 Today's workshop is about quantitative data collection and analysis. 
 
-For this workshop, I will take a Computational Studies in Education (CSIE) approach. CSIE is an interdisciplinary field that uses computational methods — like data analysis, modeling, and machine learning — to study how people learn, behave, and interact in social and educational contexts. At its core, it blends ideas from education, the social sciences, and computer science.
-
-Instead of relying only on traditional paper-based methods that focus on small-scale surveys or interviews, computational studies uses data to drawn various conclusions that extend beyond what is taught in most introductory and intermediate courses in statistics. In particular, this field works with large-scale and complex data when engage in quantitative analysis.
-
-Given our education focus, we'll focus on survey methods and I'll introduce some interesting tools and methods for computational text analysis -- which, with time and care, can be applied to your interviews and focus groups.
+In particular, we'll focus on survey methods and I'll introduce some interesting tools and methods for computational text analysis -- which, with time and care, can be applied to your interviews and focus groups.
 
 For today's institute, we will use an alternative to SPSS known as *R*. The software platform is free and online, meaning you will not need to download anything to your computer. However, if you'd like to get the software set up locally, instructions are [here](computing.qmd){target="_blank"}.
 
@@ -23,20 +19,20 @@ For today's institute, we will use an alternative to SPSS known as *R*. The soft
 By the end of this workshop, you will be able to:
 
 - Describe basic data analysis workflows using real-world educational data 
-- Produce a technical reports using what is called an R Markdown (in Quarto)  
+- Produce a technical report using what is called an R Markdown (in Quarto)  
 - Import, clean, and visualize data using `tidyverse` tools  
-- Formulate and interpret equity-focused research questions using data  
-- Extend these methods to support your dissertation research and analysis
+- Formulate and interpret critical research questions using a data set 
+- Extend methods to support your dissertation research and analysis
 
 ## Schedule
 
-| Part | Topic                          | Duration   | Time            |
+| Session | Topic                          | Duration   | Time            |
 |------|--------------------------------|------------|-----------------|
-|      | Introductions & site orientation     | 10 minutes | 10:00–10:10 AM    |   |
-| 1    | [Getting started in R and Posit](parts/part01.qmd) | 30 minutes | 10:10–10:40 AM    |
+|      | Introduction & site orientation     | 10 minutes | 10:00–10:10 AM    |   |
+| 1a    | [Quantitative data collection](parts/part01.qmd) | 30 minutes | 10:10–10:40 AM    |
 |      | Tech break                          | 5 minutes  | 10:40–10:45 AM    |
-| 2    | [Quantitative Data Collection](parts/part02.qmd) | 45 minutes | 10:45–11:30 AM    |
-|      | Break                          | 30 minutes  | 11:30 AM – 12:00 PM    |
-| 3    | [Quantitative Data Analysis](parts/part03.qmd)  | 60 minutes | 12:00 - 1:00 PM    |
-|      | Lunch Break                            | 30 minutes | 1:00–1:30 PM    |
-| 4    | [Working Session and Q&A](parts/part04.qmd)  | 90 minutes | 1:30 - 3:00 PM    |
+| 1b    | [Getting started in R and Posit](parts/part02.qmd) | 45 minutes | 10:45–11:30 AM    |
+|      | Break                          | 30 minutes  | 11:30 AM–12:00 PM    |
+| 2    | [Quantitative data analysis](parts/part03.qmd)  | 60 minutes | 12:00-1:00 PM    |
+|      | Lunch break                            | 30 minutes | 1:00–1:30 PM    |
+| 3    | [Working session and Q&A](parts/part04.qmd)  | 90 minutes | 1:30 - 3:00 PM    |
