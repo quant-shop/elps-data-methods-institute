@@ -33,12 +33,15 @@ editor_options:
 
 ```{r setup, include=F, warning=F, message=F}
 library(here)
-here::i_am("part01b.qmd")
+here::i_am("parts/part01b.qmd")
 ```
 
 ## Using Posit Cloud
 
-Posit Cloud is a web-based platform that allows users to perform data science tasks directly in their browser. It provides a cloud-based environment similar to the traditional RStudio integrated development environment (IDE), eliminating the need for local software installation and maintenance. Users can create projects, share work with collaborators, and access features like interactive notebooks. Posit Cloud offers various plans, including a free option for casual use and premium plans for professionals, instructors, and organizations.
+Posit Cloud is a web-based platform that allows users to perform data science tasks directly in their browser.
+It provides a cloud-based environment similar to the traditional RStudio integrated development environment (IDE), eliminating the need for local software installation and maintenance.
+Users can create projects, share work with collaborators, and access features like interactive notebooks.
+Posit Cloud offers various plans, including a free option for casual use and premium plans for professionals, instructors, and organizations.
 
 You can access the Posit Cloud [here](https://posit.cloud/).
 
@@ -58,9 +61,12 @@ We will work from the top left panel, in the Markdown file, and see our output i
 
 ## Directories
 
-Directories help us organizer our R projects efficiently. 
+Directories help us organizer our R projects efficiently.
 
-A common structure includes a root directory that helps set the working directory automatically. Within this root, subdirectories such as "Data" for storing datasets, "src" or "R" for R scripts and functions, "output" for results, and "plots" for visualizations are typically used. This organization enhances project management, improves collaboration, and simplifies file referencing. Using relative file paths allows for more portable code, making it easier to share projects across different computers or with collaborators.
+A common structure includes a root directory that helps set the working directory automatically.
+Within this root, subdirectories such as "Data" for storing datasets, "src" or "R" for R scripts and functions, "output" for results, and "plots" for visualizations are typically used.
+This organization enhances project management, improves collaboration, and simplifies file referencing.
+Using relative file paths allows for more portable code, making it easier to share projects across different computers or with collaborators.
 
 ### See your current working directory
 
@@ -78,35 +84,13 @@ To view files in your working directory, we'll run the `list.files()` command.
 list.files()
 ```
 
-### Create a new directory
-
-To create a new directory, we'll run the `dir.create()` command.
-
-```{r, eval=F}
-dir.create("name_of_new_folder")
-```
-
-### Set your working directory
-
-To set your working directory, we'll run the `setwd()` command.
-
-```{r, eval=F}
-setwd()
-```
-
-#### Verify the change
-
-When you set a new working directory, you want to verify the change by using `getwd()`.
-
-```{r, eval=F}
-getwd()
-```
-
 ## Packages
 
-Packages in R are collections of functions, data, and documentation that extend the language's capabilities. They allow users to easily share and reuse code, making R a powerful and flexible tool for data analysis and visualization. 
+Packages in R are collections of functions, data, and documentation that extend the language's capabilities.
+They allow users to easily share and reuse code, making R a powerful and flexible tool for data analysis and visualization.
 
-Packages can be installed from repositories like CRAN, and once installed, they can be loaded into an R session to access their functionality. The tidyverse, for example, is a popular collection of packages that provides a consistent and user-friendly approach to data manipulation and visualization.
+Packages can be installed from repositories like CRAN, and once installed, they can be loaded into an R session to access their functionality.
+The tidyverse, for example, is a popular collection of packages that provides a consistent and user-friendly approach to data manipulation and visualization.
 
 ### Install the Praise package.
 
@@ -220,7 +204,7 @@ Take the square root of b
 sqrt(b)
 ```
 
----
+------------------------------------------------------------------------
 
 Compute the natural log of b
 
@@ -245,10 +229,12 @@ Find 1 minus the square root of b
 Attempt to find the square root of "1 minus the square root of b" - which is a negative value
 
 ```{r}
-sqrt(1-b)
+sqrt(1 - sqrt(b))
 ```
 
-NaN stands for "Not a number". This occurs because there is currently no defined value to recognize the square root of negative numbers in R. But we can compute the square root on the absolute value of this difference, if needed.
+NaN stands for "Not a number".
+This occurs because there is currently no defined value to recognize the square root of negative numbers in R.
+But we can compute the square root on the absolute value of this difference, if needed.
 
 ```{r}
 sqrt(abs(1-b))
@@ -256,7 +242,8 @@ sqrt(abs(1-b))
 
 ------------------------------------------------------------------------
 
-We can insert longer or more complex mathematical statements too. For example, we can find the absolute value of the sum of -1 and the square root of b cubed and then subtract from that the value of 3 times the square root of b.
+We can insert longer or more complex mathematical statements too.
+For example, we can find the absolute value of the sum of -1 and the square root of b cubed and then subtract from that the value of 3 times the square root of b.
 
 Notice the use of parentheses.
 
@@ -286,7 +273,7 @@ character <- 'some label'
 character
 ```
 
-We can create a character value using the ',' or "," quotes.
+We can create a character value using single (`'`) or double (`"`) quotation marks.
 
 ```{r}
 character <- "some label"
@@ -377,14 +364,30 @@ y
 
 ## Recommended readings
 
-Baumer, B. S., Kaplan, D. T., & Horton, N. J. (2017). *Modern data science with R*. Chapman and Hall/CRC.
+Baumer, B. S., Kaplan, D. T., & Horton, N. J.
+(2017).
+*Modern data science with R*.
+Chapman and Hall/CRC.
 
-Grolemund, G., & Wickham, H. (2017). *R for data science: Import, tidy, transform, visualize, and model data*. O’Reilly Media. [https://r4ds.had.co.nz/](https://r4ds.had.co.nz/){target="_blank"}
+Grolemund, G., & Wickham, H.
+(2017).
+*R for data science: Import, tidy, transform, visualize, and model data*.
+O’Reilly Media.
+[https://r4ds.had.co.nz/](https://r4ds.had.co.nz/){target="_blank"}
 
-Peng, R. D. (2016). *R programming for data science*. Leanpub. [https://bookdown.org/rdpeng/rprogdatascience/](https://bookdown.org/rdpeng/rprogdatascience/){target="_blank"}
+Peng, R. D.
+(2016).
+*R programming for data science*.
+Leanpub.
+[https://bookdown.org/rdpeng/rprogdatascience/](https://bookdown.org/rdpeng/rprogdatascience/){target="_blank"}
 
-RStudio Education (n.d.). Learning R for Beginners. Online. [https://education.rstudio.com/learn/beginner/](https://education.rstudio.com/learn/beginner/){target="_blank"}
+RStudio Education (n.d.).
+Learning R for Beginners.
+Online.
+[https://education.rstudio.com/learn/beginner/](https://education.rstudio.com/learn/beginner/){target="_blank"}
 
-Wickham, H. (2019). *Advanced R* (2nd ed.). Chapman and Hall/CRC. [https://adv-r.hadley.nz/](https://adv-r.hadley.nz/){target="_blank"}
-
-
+Wickham, H.
+(2019).
+*Advanced R* (2nd ed.).
+Chapman and Hall/CRC.
+[https://adv-r.hadley.nz/](https://adv-r.hadley.nz/){target="_blank"}

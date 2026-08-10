@@ -32,6 +32,182 @@ editor_options:
 
 ```{r setup, include=F, warning=F, message=F}
 library(here)
-here::i_am("part02.qmd")
+here::i_am("parts/part02.qmd")
 ```
+
+## Case Study: HBCUs and Educational Geography
+
+In this section, we analyze data on Historically Black Colleges and Universities (HBCUs) to explore patterns in location, institutional type, and founding history.
+
+------------------------------------------------------------------------
+
+### Step 1: Load Packages
+
+```{r, message=F, warning=F}
+#install.packages("tidyverse")
+#install.packages("lubridate")
+library(tidyverse)
+library(lubridate)
+```
+
+We'll start with a guided example using data on Historically Black Colleges and Universities.
+
+### Step 2: Load the data
+
+```{r, message=F, warning=F}
+
+library(tidyverse)
+hbcu <- read_csv("https://raw.githubusercontent.com/quant-shop/intro-comp-educ-soc/refs/heads/main/data/hbcu_data.csv")
+
+# View the first few rows
+head(hbcu)
+
+# Check structure
+glimpse(hbcu)
+
+# Summary statistics
+summary(hbcu)
+```
+
+### Step 3: Clean the data
+
+```{r, message=F, warning=F}
+hbcu <- hbcu %>%
+  mutate(
+    founded = as.numeric(founded),
+    type = as.factor(type),
+    state = as.factor(state)
+  )
+```
+
+### Step 4: Basic Exploration
+
+How many institutions are in the data set?
+
+```{r, message=F, warning=F}
+nrow(hbcu)
+```
+
+What is the distribution by HBCU type?
+
+```{r, message=F, warning=F}
+hbcu %>%
+  count(type) %>%
+  arrange(desc(n))
+
+```
+
+### Step 5: Historical Analysis
+
+When were the HBCUs founded?
+
+```{r, message=F, warning=F}
+hbcu %>%
+  ggplot(aes(x = founded)) +
+  geom_histogram(binwidth = 10, fill = "steelblue", color = "white") +
+  labs(
+    title = "Founding Years of HBCUs",
+    x = "Year Founded",
+    y = "Number of Institutions"
+  )
+```
+
+### Step 6: Geographic Distribution
+
+HBCUs by state
+
+```{r, message=F, warning=F}
+hbcu %>%
+  count(state, sort = TRUE)
+```
+
+Basic visualization of HBCUs by state
+
+```{r, message=F, warning=F}
+hbcu %>%
+  count(state) %>%
+  ggplot(aes(x = reorder(state, n), y = n)) +
+  geom_col(fill = "darkgreen") +
+  coord_flip() +
+  labs(
+    title = "Number of HBCUs by State",
+    x = "State",
+    y = "Count"
+  )
+```
+
+### Step 7: Mapping
+
+```{r, message=F, warning=F}
+#install.packages("maps", repos = "http://cran.us.r-project.org")
+library(maps)
+```
+
+```{r, message=F, warning=F}
+hbcu %>%
+  ggplot(aes(x = lon, y = lat)) +
+  borders("state") +
+  geom_point(color = "red", alpha = 0.6) +
+  coord_fixed(1.3) +
+  labs(
+    title = "Geographic Distribution of HBCUs in the U.S.",
+    x = "Longitude",
+    y = "Latitude"
+  )
+```
+
+------------------------------------------------------------------------
+
+## Case Study: Data on State School Districts
+
+### Step 1: Load the libraries
+
+```{r, message=F, warning=F}
+library(dplyr)
+library(readr)
+library(stringr)
+library(janitor)
+```
+
+### Step 2: Load the data
+
+```{r, message=F, warning=F}
+district <- read.csv("https://raw.githubusercontent.com/quant-shop/intro-comp-educ-soc/refs/heads/main/data/state-district-data.csv")
+# district <- read.csv("../data/state-district-data.csv")
+
+str(district)
+```
+
+### Step 3: Clean the data
+
+```{r, message=F, warning=F}
+district_clean <- district %>%
+  
+  # Fix missing/suppressed values
+  mutate(across(where(is.character), ~na_if(., "–"))) %>%
+  mutate(across(where(is.character), ~na_if(., "†"))) %>%
+  mutate(across(where(is.character), str_trim)) %>%
+  
+  # Convert numeric columns safely
+  mutate(across(
+    where(is.character),
+    ~parse_number(.)
+  ))
+```
+
+### Step 4: Feature engineering
+
+We can create variables that answer educational questions.
+
+```{r}
+str(district_clean)
+# what kinds of questions might you answer with this data set?
+```
+
+## Recommended readings
+
+Knaflic, C. N.
+(2015).
+*Storytelling with data: A data visualization guide for business professionals*.
+Wiley.
 

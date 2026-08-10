@@ -51,8 +51,6 @@ website:
           text: Part 2  
         - href: parts/part03.qmd
           text: Part 3  
-        - href: parts/part04.qmd
-          text: Part 4   
           
 format:
   html:

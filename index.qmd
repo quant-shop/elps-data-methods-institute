@@ -6,11 +6,11 @@ institute:
   - "Center for Applied Data Science and Analytics"
 ---
 
-Thank you for joining us. This site is to support your learning during this Quantitative Section of the *2026 Howard University ELPS Methods and Data Institute*. My name is [Professor Nathan Alexander](about.qmd){target="_blank"} and I will be today's facilitator.
+Thank you for joining us. This site is to support your learning during the quantitative session of the *2026 Howard University ELPS Methods and Data Institute*. My name is [Professor Nathan Alexander](about.qmd){target="_blank"} and I will be today's facilitator.
 
-Today's workshop is about quantitative data collection and analysis. 
+Today's workshop is about quantitative data collection and analysis.
 
-In particular, we'll focus on survey methods and I'll introduce some interesting tools and methods for computational text analysis -- which, with time and care, can be applied to your interviews and focus groups.
+More specifically, we'll focus on survey methods and some interesting tools and methods for computational text analysis -- which, with time and care, can be applied to your interviews and focus groups.
 
 For today's institute, we will use an alternative to SPSS known as *R*. The software platform is free and online, meaning you will not need to download anything to your computer. However, if you'd like to get the software set up locally, instructions are [here](computing.qmd){target="_blank"}.
 
@@ -18,21 +18,21 @@ For today's institute, we will use an alternative to SPSS known as *R*. The soft
 
 By the end of this workshop, you will be able to:
 
-- Describe basic data analysis workflows using real-world educational data 
-- Produce a technical report using what is called an R Markdown (in Quarto)  
-- Import, clean, and visualize data using `tidyverse` tools  
-- Formulate and interpret critical research questions using a data set 
-- Extend methods to support your dissertation research and analysis
+-   Describe basic data analysis workflows using real-world educational data
+-   Produce a technical report using what is called an R Markdown (in Quarto)\
+-   Import, clean, and visualize data using `tidyverse` tools\
+-   Formulate and interpret critical research questions using a data set
+-   Extend methods to support your dissertation research and analysis
 
 ## Schedule
 
-| Session | Topic                          | Duration   | Time            |
-|------|--------------------------------|------------|-----------------|
-|      | Introduction & site orientation     | 10 minutes | 10:00–10:10 AM    |   |
-| 1a    | [Quantitative data collection](parts/part01.qmd) | 30 minutes | 10:10–10:40 AM    |
-|      | Tech break                          | 5 minutes  | 10:40–10:45 AM    |
-| 1b    | [Getting started in R and Posit](parts/part02.qmd) | 45 minutes | 10:45–11:30 AM    |
-|      | Break                          | 30 minutes  | 11:30 AM–12:00 PM    |
-| 2    | [Quantitative data analysis](parts/part03.qmd)  | 60 minutes | 12:00-1:00 PM    |
-|      | Lunch break                            | 30 minutes | 1:00–1:30 PM    |
-| 3    | [Working session and Q&A](parts/part04.qmd)  | 90 minutes | 1:30 - 3:00 PM    |
+| Session | Topic | Duration | Time |
+|--------------|------------------------------|--------------|---------------|
+|  | Introduction & site orientation | 10 minutes | 10:00–10:10 AM |
+| 1a | [Quantitative data collection](parts/part01a.qmd) | 30 minutes | 10:10–10:40 AM |
+|  | Tech break | 5 minutes | 10:40–10:45 AM |
+| 1b | [Getting started in R and Posit](parts/part01b.qmd) | 45 minutes | 10:45–11:30 AM |
+|  | Break | 15 minutes | 11:30–11:45 AM |
+| 2 | [Quantitative data analysis](parts/part02.qmd) | 75 minutes | 11:45 AM-1:00 PM |
+|  | Lunch break | 30 minutes | 1:00–1:30 PM |
+| 3 | [Working session and Q&A](parts/part03.qmd) | 90 minutes | 1:30 - 3:00 PM |

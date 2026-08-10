@@ -8,7 +8,7 @@
 
 <meta name="author" content="Nathan Alexander, PhD">
 
-<title>Part 2: Quantitative Data Analysis – ELPS Data and Methods Institute: Quantitative Data Collection and Analysis</title>
+<title>Part 2: Quantitative data analysis – ELPS Data and Methods Institute: Quantitative Data Collection and Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,9 +106,12 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Part 2: Quantitative Data Analysis – ELPS Data and Methods Institute: Quantitative Data Collection and Analysis">
+<meta property="og:title" content="Part 2: Quantitative data analysis – ELPS Data and Methods Institute: Quantitative Data Collection and Analysis">
 <meta property="og:description" content="Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute">
+<meta property="og:image" content="https://quant-shop.github.io/elps-data-methods-institute/parts/part02_files/figure-html/unnamed-chunk-6-1.png">
 <meta property="og:site_name" content="ELPS Data and Methods Institute: Quantitative Data Collection and Analysis">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1344">
 </head>
 
 <body class="nav-sidebar docked">
@@ -183,12 +220,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Part 3</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../parts/part04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Part 4</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -197,14 +228,37 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="part02-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="part02.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#case-study-hbcus-and-educational-geography" id="toc-case-study-hbcus-and-educational-geography" class="nav-link active" data-scroll-target="#case-study-hbcus-and-educational-geography">Case Study: HBCUs and Educational Geography</a>
+  <ul class="collapse">
+  <li><a href="#step-1-load-packages" id="toc-step-1-load-packages" class="nav-link" data-scroll-target="#step-1-load-packages">Step 1: Load Packages</a></li>
+  <li><a href="#step-2-load-the-data" id="toc-step-2-load-the-data" class="nav-link" data-scroll-target="#step-2-load-the-data">Step 2: Load the data</a></li>
+  <li><a href="#step-3-clean-the-data" id="toc-step-3-clean-the-data" class="nav-link" data-scroll-target="#step-3-clean-the-data">Step 3: Clean the data</a></li>
+  <li><a href="#step-4-basic-exploration" id="toc-step-4-basic-exploration" class="nav-link" data-scroll-target="#step-4-basic-exploration">Step 4: Basic Exploration</a></li>
+  <li><a href="#step-5-historical-analysis" id="toc-step-5-historical-analysis" class="nav-link" data-scroll-target="#step-5-historical-analysis">Step 5: Historical Analysis</a></li>
+  <li><a href="#step-6-geographic-distribution" id="toc-step-6-geographic-distribution" class="nav-link" data-scroll-target="#step-6-geographic-distribution">Step 6: Geographic Distribution</a></li>
+  <li><a href="#step-7-mapping" id="toc-step-7-mapping" class="nav-link" data-scroll-target="#step-7-mapping">Step 7: Mapping</a></li>
+  </ul></li>
+  <li><a href="#case-study-data-on-state-school-districts" id="toc-case-study-data-on-state-school-districts" class="nav-link" data-scroll-target="#case-study-data-on-state-school-districts">Case Study: Data on State School Districts</a>
+  <ul class="collapse">
+  <li><a href="#step-1-load-the-libraries" id="toc-step-1-load-the-libraries" class="nav-link" data-scroll-target="#step-1-load-the-libraries">Step 1: Load the libraries</a></li>
+  <li><a href="#step-2-load-the-data-1" id="toc-step-2-load-the-data-1" class="nav-link" data-scroll-target="#step-2-load-the-data-1">Step 2: Load the data</a></li>
+  <li><a href="#step-3-clean-the-data-1" id="toc-step-3-clean-the-data-1" class="nav-link" data-scroll-target="#step-3-clean-the-data-1">Step 3: Clean the data</a></li>
+  <li><a href="#step-4-feature-engineering" id="toc-step-4-feature-engineering" class="nav-link" data-scroll-target="#step-4-feature-engineering">Step 4: Feature engineering</a></li>
+  </ul></li>
+  <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="part02-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="part02.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/part01a.html">Workshop slides</a></li><li class="breadcrumb-item"><a href="../parts/part02.html">Part 2</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Part 2: Quantitative Data Analysis</h1>
+<h1 class="title">Part 2: Quantitative data analysis</h1>
 <p class="subtitle lead">Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute</p>
 </div>
 
@@ -238,8 +292,352 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="case-study-hbcus-and-educational-geography" class="level2">
+<h2 class="anchored" data-anchor-id="case-study-hbcus-and-educational-geography">Case Study: HBCUs and Educational Geography</h2>
+<p>In this section, we analyze data on Historically Black Colleges and Universities (HBCUs) to explore patterns in location, institutional type, and founding history.</p>
+<hr>
+<section id="step-1-load-packages" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-load-packages">Step 1: Load Packages</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("tidyverse")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("lubridate")</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We’ll start with a guided example using data on Historically Black Colleges and Universities.</p>
+</section>
+<section id="step-2-load-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-load-the-data">Step 2: Load the data</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>hbcu <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/quant-shop/intro-comp-educ-soc/refs/heads/main/data/hbcu_data.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># View the first few rows</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(hbcu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+  name                     city       state founded   lat   lon type           
+  &lt;chr&gt;                    &lt;chr&gt;      &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;          
+1 Alabama A&amp;M University   Normal     AL       1875  34.8 -86.6 Public, 4 Year 
+2 Alabama State University Montgomery AL       1867  32.4 -86.3 Public, 4 Year 
+3 Albany State University  Albany     GA       1903  31.6 -84.2 Public, 4 Year 
+4 Alcorn State University  Lorman     MS       1871  31.9 -91.1 Public, 4 Year 
+5 Allen University         Columbia   SC       1870  34.0 -81.0 Private, 4 Year
+6 American Baptist College Nashville  TN       1924  36.2 -86.8 Private, 4 Year</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check structure</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(hbcu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 102
+Columns: 7
+$ name    &lt;chr&gt; "Alabama A&amp;M University", "Alabama State University", "Albany …
+$ city    &lt;chr&gt; "Normal", "Montgomery", "Albany", "Lorman", "Columbia", "Nashv…
+$ state   &lt;chr&gt; "AL", "AL", "GA", "MS", "SC", "TN", "AR", "SC", "NC", "FL", "A…
+$ founded &lt;dbl&gt; 1875, 1867, 1903, 1871, 1870, 1924, 1884, 1870, 1873, 1904, 19…
+$ lat     &lt;dbl&gt; 34.7834, 32.3643, 31.5785, 31.8769, 34.0298, 36.1659, 34.7465,…
+$ lon     &lt;dbl&gt; -86.5683, -86.2952, -84.1543, -91.1458, -81.0115, -86.7844, -9…
+$ type    &lt;chr&gt; "Public, 4 Year", "Public, 4 Year", "Public, 4 Year", "Public,…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary statistics</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(hbcu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     name               city              state              founded    
+ Length:102         Length:102         Length:102         Min.   :1837  
+ Class :character   Class :character   Class :character   1st Qu.:1870  
+ Mode  :character   Mode  :character   Mode  :character   Median :1886  
+                                                          Mean   :1895  
+                                                          3rd Qu.:1905  
+                                                          Max.   :1988  
+      lat             lon             type          
+ Min.   :18.34   Min.   :-98.50   Length:102        
+ 1st Qu.:32.48   1st Qu.:-90.13   Class :character  
+ Median :34.02   Median :-84.64   Mode  :character  
+ Mean   :34.31   Mean   :-85.13                     
+ 3rd Qu.:36.17   3rd Qu.:-80.78                     
+ Max.   :39.93   Max.   :-64.96                     </code></pre>
+</div>
+</div>
+</section>
+<section id="step-3-clean-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-clean-the-data">Step 3: Clean the data</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>hbcu <span class="ot">&lt;-</span> hbcu <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">founded =</span> <span class="fu">as.numeric</span>(founded),</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="fu">as.factor</span>(type),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> <span class="fu">as.factor</span>(state)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-4-basic-exploration" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-basic-exploration">Step 4: Basic Exploration</h3>
+<p>How many institutions are in the data set?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(hbcu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 102</code></pre>
+</div>
+</div>
+<p>What is the distribution by HBCU type?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>hbcu <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(type) <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  type                     n
+  &lt;fct&gt;                &lt;int&gt;
+1 Private, 4 Year         45
+2 Public, 4 Year          40
+3 Public, 2 Year          11
+4 Private, Specialized     4
+5 Private, 2 Year          2</code></pre>
+</div>
+</div>
+</section>
+<section id="step-5-historical-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-historical-analysis">Step 5: Historical Analysis</h3>
+<p>When were the HBCUs founded?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>hbcu <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> founded)) <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">10</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Founding Years of HBCUs"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year Founded"</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Institutions"</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="part02_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6-geographic-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-geographic-distribution">Step 6: Geographic Distribution</h3>
+<p>HBCUs by state</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>hbcu <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(state, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 21 × 2
+   state     n
+   &lt;fct&gt; &lt;int&gt;
+ 1 AL       14
+ 2 GA       10
+ 3 NC       10
+ 4 TX        9
+ 5 SC        8
+ 6 MS        7
+ 7 LA        6
+ 8 TN        6
+ 9 AR        4
+10 FL        4
+# ℹ 11 more rows</code></pre>
+</div>
+</div>
+<p>Basic visualization of HBCUs by state</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>hbcu <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(state) <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(state, n), <span class="at">y =</span> n)) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"darkgreen"</span>) <span class="sc">+</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Number of HBCUs by State"</span>,</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"State"</span>,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Count"</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="part02_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-7-mapping" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-mapping">Step 7: Mapping</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("maps", repos = "http://cran.us.r-project.org")</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(maps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>hbcu <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> lon, <span class="at">y =</span> lat)) <span class="sc">+</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">borders</span>(<span class="st">"state"</span>) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"red"</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>(<span class="fl">1.3</span>) <span class="sc">+</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Geographic Distribution of HBCUs in the U.S."</span>,</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Longitude"</span>,</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Latitude"</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="part02_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="case-study-data-on-state-school-districts" class="level2">
+<h2 class="anchored" data-anchor-id="case-study-data-on-state-school-districts">Case Study: Data on State School Districts</h2>
+<section id="step-1-load-the-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-load-the-libraries">Step 1: Load the libraries</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-2-load-the-data-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-load-the-data-1">Step 2: Load the data</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>district <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/quant-shop/intro-comp-educ-soc/refs/heads/main/data/state-district-data.csv"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># district &lt;- read.csv("../data/state-district-data.csv")</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(district)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   57 obs. of  36 variables:
+ $ State.Name                                                         : chr  "ALABAMA" "ALASKA" "AMERICAN SAMOA" "ARIZONA" ...
+ $ State.Abbr                                                         : chr  "AL " "AK " "AS " "AZ " ...
+ $ ANSI.FIPS.State.Code..State..Latest.available.year                 : int  1 2 60 4 5 59 6 8 9 10 ...
+ $ Total.Number.Operational.School.Districts..District..2023.24       : int  156 54 1 685 304 174 2108 272 208 45 ...
+ $ Total.Number.Operational.Schools..Public.School..2023.24           : int  1524 494 29 2427 1101 174 10326 1908 1010 234 ...
+ $ Total.Number.Operational.Charter.Schools..Public.School..2023.24   : chr  "18" "31" "†" "571" ...
+ $ Prekindergarten.Students..State..2023.24                           : chr  "21924" "3320" "–" "20810" ...
+ $ Kindergarten.Students..State..2023.24                              : chr  "55881" "9257" "–" "72320" ...
+ $ Grades.1.8.Students..State..2023.24                                : chr  "447317" "78890" "–" "654843" ...
+ $ Grades.9.12.Students..State..2023.24                               : chr  "223528" "39776" "–" "369124" ...
+ $ Grade.13.Students..State..2023.24                                  : chr  "†" "†" "†" "†" ...
+ $ Ungraded.Students..State..2023.24                                  : chr  "†" "†" "†" "533" ...
+ $ American.Indian.Alaska.Native.Students..State..2023.24             : chr  "5997" "28284" "–" "46878" ...
+ $ Asian.or.Asian.Pacific.Islander.Students..State..2023.24           : chr  "11016" "6458" "–" "35975" ...
+ $ Hispanic.Students..State..2023.24                                  : chr  "84196" "10076" "–" "539087" ...
+ $ Black.or.African.American.Students..State..2023.24                 : chr  "236304" "2955" "–" "64938" ...
+ $ White.Students..State..2023.24                                     : chr  "381550" "61502" "–" "378320" ...
+ $ Nat..Hawaiian.or.Other.Pacific.Isl..Students..State..2023.24       : chr  "831" "4148" "–" "4017" ...
+ $ Two.or.More.Races.Students..State..2023.24                         : chr  "28756" "17820" "–" "48415" ...
+ $ Total.Enrollment..Exclude.AE..for.SY.2014.15.onward..State..2023.24: chr  "748650" "131243" "–" "1117630" ...
+ $ Full.Time.Equivalent..FTE..Teachers..State..2023.24                : chr  "42857.92" "7221.23" "–" "49260.47" ...
+ $ Pupil.Teacher.Ratio..State..2023.24                                : chr  "17.47" "18.17" "–" "22.69" ...
+ $ State.Name..State..2023.24                                         : chr  "ALABAMA" "ALASKA" "AMERICAN SAMOA" "ARIZONA" ...
+ $ Total.Number.of.Districts.with.Enrollment..District..2023.24       : int  150 54 0 664 260 174 1984 185 201 42 ...
+ $ Total.Number.of.School.Districts..District..2023.24                : int  159 54 1 722 308 174 2113 272 210 45 ...
+ $ Total.Number.of.Public.Schools..Public.School..2023.24             : int  1527 498 29 2557 1106 174 10349 1908 1018 235 ...
+ $ Male.Students..State..2023.24                                      : chr  "384500" "67646" "†" "569863" ...
+ $ Female.Students..State..2023.24                                    : chr  "364150" "63597" "†" "547767" ...
+ $ Black.or.African.American...male..State..2023.24                   : chr  "120605" "1488" "–" "33191" ...
+ $ Black.or.African.American...female..State..2023.24                 : chr  "115699" "1467" "–" "31747" ...
+ $ White...male..State..2023.24                                       : chr  "197384" "31786" "–" "194292" ...
+ $ White...female..State..2023.24                                     : chr  "184166" "29716" "–" "184028" ...
+ $ Grade.12.Students...Black.or.African.American..State..2023.24      : chr  "15413" "241" "–" "5876" ...
+ $ Secondary.Teachers..State..2023.24                                 : chr  "20188.71" "3673.47" "–" "15996.72" ...
+ $ Elementary.Teachers..State..2023.24                                : chr  "18395.46" "2985.09" "–" "30478.09" ...
+ $ Full.Time.Equivalent..FTE..Staff..State..2023.24                   : chr  "79963.90" "16423.20" "–" "109199.43" ...</code></pre>
+</div>
+</div>
+</section>
+<section id="step-3-clean-the-data-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-clean-the-data-1">Step 3: Clean the data</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>district_clean <span class="ot">&lt;-</span> district <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fix missing/suppressed values</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), <span class="sc">~</span><span class="fu">na_if</span>(., <span class="st">"–"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), <span class="sc">~</span><span class="fu">na_if</span>(., <span class="st">"†"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), str_trim)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert numeric columns safely</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">where</span>(is.character),</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span><span class="fu">parse_number</span>(.)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-4-feature-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-feature-engineering">Step 4: Feature engineering</h3>
+<p>We can create variables that answer educational questions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(district_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   57 obs. of  36 variables:
+ $ State.Name                                                         : num  NA NA NA NA NA NA NA NA NA NA ...
+  ..- attr(*, "problems")= tibble [57 × 4] (S3: tbl_df/tbl/data.frame)
+  .. ..$ row     : int [1:57] 1 2 3 4 5 6 7 8 9 10 ...
+  .. ..$ col     : int [1:57] NA NA NA NA NA NA NA NA NA NA ...
+  .. ..$ expected: chr [1:57] "a number" "a number" "a number" "a number" ...
+  .. ..$ actual  : chr [1:57] "ALABAMA" "ALASKA" "AMERICAN SAMOA" "ARIZONA" ...
+ $ State.Abbr                                                         : num  NA NA NA NA NA NA NA NA NA NA ...
+  ..- attr(*, "problems")= tibble [57 × 4] (S3: tbl_df/tbl/data.frame)
+  .. ..$ row     : int [1:57] 1 2 3 4 5 6 7 8 9 10 ...
+  .. ..$ col     : int [1:57] NA NA NA NA NA NA NA NA NA NA ...
+  .. ..$ expected: chr [1:57] "a number" "a number" "a number" "a number" ...
+  .. ..$ actual  : chr [1:57] "AL" "AK" "AS" "AZ" ...
+ $ ANSI.FIPS.State.Code..State..Latest.available.year                 : int  1 2 60 4 5 59 6 8 9 10 ...
+ $ Total.Number.Operational.School.Districts..District..2023.24       : int  156 54 1 685 304 174 2108 272 208 45 ...
+ $ Total.Number.Operational.Schools..Public.School..2023.24           : int  1524 494 29 2427 1101 174 10326 1908 1010 234 ...
+ $ Total.Number.Operational.Charter.Schools..Public.School..2023.24   : num  18 31 NA 571 105 NA 1280 261 21 23 ...
+ $ Prekindergarten.Students..State..2023.24                           : num  21924 3320 NA 20810 10102 ...
+ $ Kindergarten.Students..State..2023.24                              : num  55881 9257 NA 72320 34776 ...
+ $ Grades.1.8.Students..State..2023.24                                : num  447317 78890 NA 654843 290034 ...
+ $ Grades.9.12.Students..State..2023.24                               : num  223528 39776 NA 369124 149892 ...
+ $ Grade.13.Students..State..2023.24                                  : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ Ungraded.Students..State..2023.24                                  : num  NA NA NA 533 174 NA NA NA NA 0 ...
+ $ American.Indian.Alaska.Native.Students..State..2023.24             : num  5997 28284 NA 46878 2789 ...
+ $ Asian.or.Asian.Pacific.Islander.Students..State..2023.24           : num  11016 6458 NA 35975 8858 ...
+ $ Hispanic.Students..State..2023.24                                  : num  84196 10076 NA 539087 70888 ...
+ $ Black.or.African.American.Students..State..2023.24                 : num  236304 2955 NA 64938 94324 ...
+ $ White.Students..State..2023.24                                     : num  381550 61502 NA 378320 280483 ...
+ $ Nat..Hawaiian.or.Other.Pacific.Isl..Students..State..2023.24       : num  831 4148 NA 4017 4960 ...
+ $ Two.or.More.Races.Students..State..2023.24                         : num  28756 17820 NA 48415 22666 ...
+ $ Total.Enrollment..Exclude.AE..for.SY.2014.15.onward..State..2023.24: num  748650 131243 NA 1117630 484978 ...
+ $ Full.Time.Equivalent..FTE..Teachers..State..2023.24                : num  42858 7221 NA 49260 38755 ...
+ $ Pupil.Teacher.Ratio..State..2023.24                                : num  17.5 18.2 NA 22.7 12.5 ...
+ $ State.Name..State..2023.24                                         : num  NA NA NA NA NA NA NA NA NA NA ...
+  ..- attr(*, "problems")= tibble [57 × 4] (S3: tbl_df/tbl/data.frame)
+  .. ..$ row     : int [1:57] 1 2 3 4 5 6 7 8 9 10 ...
+  .. ..$ col     : int [1:57] NA NA NA NA NA NA NA NA NA NA ...
+  .. ..$ expected: chr [1:57] "a number" "a number" "a number" "a number" ...
+  .. ..$ actual  : chr [1:57] "ALABAMA" "ALASKA" "AMERICAN SAMOA" "ARIZONA" ...
+ $ Total.Number.of.Districts.with.Enrollment..District..2023.24       : int  150 54 0 664 260 174 1984 185 201 42 ...
+ $ Total.Number.of.School.Districts..District..2023.24                : int  159 54 1 722 308 174 2113 272 210 45 ...
+ $ Total.Number.of.Public.Schools..Public.School..2023.24             : int  1527 498 29 2557 1106 174 10349 1908 1018 235 ...
+ $ Male.Students..State..2023.24                                      : num  384500 67646 NA 569863 248311 ...
+ $ Female.Students..State..2023.24                                    : num  364150 63597 NA 547767 236657 ...
+ $ Black.or.African.American...male..State..2023.24                   : num  120605 1488 NA 33191 47530 ...
+ $ Black.or.African.American...female..State..2023.24                 : num  115699 1467 NA 31747 46794 ...
+ $ White...male..State..2023.24                                       : num  197384 31786 NA 194292 144628 ...
+ $ White...female..State..2023.24                                     : num  184166 29716 NA 184028 135855 ...
+ $ Grade.12.Students...Black.or.African.American..State..2023.24      : num  15413 241 NA 5876 5828 ...
+ $ Secondary.Teachers..State..2023.24                                 : num  20189 3673 NA 15997 16388 ...
+ $ Elementary.Teachers..State..2023.24                                : num  18395 2985 NA 30478 17007 ...
+ $ Full.Time.Equivalent..FTE..Staff..State..2023.24                   : num  79964 16423 NA 109199 80417 ...
+  ..- attr(*, "problems")= tibble [1 × 4] (S3: tbl_df/tbl/data.frame)
+  .. ..$ row     : int 51
+  .. ..$ col     : int NA
+  .. ..$ expected: chr "a number"
+  .. ..$ actual  : chr "‡"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what kinds of questions might you answer with this data set?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="recommended-readings" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-readings">Recommended readings</h2>
+<p>Knaflic, C. N. (2015). <em>Storytelling with data: A data visualization guide for business professionals</em>. Wiley.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
