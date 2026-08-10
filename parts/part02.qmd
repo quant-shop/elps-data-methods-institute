@@ -35,6 +35,7 @@ library(here)
 here::i_am("parts/part02.qmd")
 ```
 
+
 ## Case Study: HBCUs and Educational Geography
 
 In this section, we analyze data on Historically Black Colleges and Universities (HBCUs) to explore patterns in location, institutional type, and founding history.
