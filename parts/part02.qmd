@@ -123,7 +123,7 @@ We use a chi-square test to study categorical variables.
 
 ---
 
-## Discussion: What types of tests will you be using in your dissertation?
+## Discussion: What types of statistical tests will you be using in your dissertation?
 
 ---
 
@@ -144,6 +144,8 @@ library(lubridate)
 
 We'll start with a guided example using data on Historically Black Colleges and Universities.
 
+---
+
 ### Step 2: Load the data
 
 ```{r, message=F, warning=F}
@@ -161,6 +163,8 @@ glimpse(hbcu)
 summary(hbcu)
 ```
 
+---
+
 ### Step 3: Clean the data
 
 ```{r, message=F, warning=F}
@@ -171,6 +175,8 @@ hbcu <- hbcu %>%
     state = as.factor(state)
   )
 ```
+
+---
 
 ### Step 4: Basic Exploration
 
@@ -189,6 +195,8 @@ hbcu %>%
 
 ```
 
+---
+
 ### Step 5: Historical Analysis
 
 When were the HBCUs founded?
@@ -203,6 +211,8 @@ hbcu %>%
     y = "Number of Institutions"
   )
 ```
+
+---
 
 ### Step 6: Geographic Distribution
 
@@ -228,6 +238,8 @@ hbcu %>%
   )
 ```
 
+---
+
 ### Step 7: Mapping
 
 ```{r, message=F, warning=F}
@@ -248,7 +260,7 @@ hbcu %>%
   )
 ```
 
-------------------------------------------------------------------------
+---
 
 ## Case Study: Data on State School Districts
 
@@ -264,8 +276,12 @@ library(janitor)
 ### Step 2: Load the data
 
 ```{r, message=F, warning=F}
-district <- read.csv("https://raw.githubusercontent.com/quant-shop/intro-comp-educ-soc/refs/heads/main/data/state-district-data.csv")
-# district <- read.csv("../data/state-district-data.csv")
+district <- read_csv(
+  "https://raw.githubusercontent.com/quant-shop/intro-comp-educ-soc/refs/heads/main/data/state-district-data.csv",
+  show_col_types = FALSE
+)
+
+# district <- read_csv("../data/state-district-data.csv")
 
 str(district)
 ```
@@ -275,16 +291,30 @@ str(district)
 ```{r, message=F, warning=F}
 district_clean <- district %>%
   
-  # Fix missing/suppressed values
-  mutate(across(where(is.character), ~na_if(., "–"))) %>%
-  mutate(across(where(is.character), ~na_if(., "†"))) %>%
+  # Make long variable names easier to use
+  clean_names() %>%
+  
+  # Trim whitespace in all text fields
   mutate(across(where(is.character), str_trim)) %>%
   
-  # Convert numeric columns safely
-  mutate(across(
-    where(is.character),
-    ~parse_number(.)
-  ))
+  # Convert measure columns stored as character text to numeric.
+  # Keep state identifiers as character variables.
+  mutate(
+    across(
+      where(is.character) &
+        !all_of(c(
+          "state_name",
+          "state_abbr",
+          "state_name_state_2023_24"
+        )),
+      ~ parse_number(.x, na = c("", "NA", "–", "†"))
+    )
+  ) %>%
+  
+  # Keep one state-name variable rather than two identical versions
+  select(-state_name_state_2023_24)
+
+glimpse(district_clean)
 ```
 
 ### Step 4: Feature engineering
@@ -293,12 +323,57 @@ We can create variables that answer educational questions.
 
 ```{r}
 str(district_clean)
-# what kinds of questions might you answer with this data set?
+
+district_features <- district_clean %>%
+  mutate(
+    enrollment_per_operational_district =
+      if_else(
+        total_number_operational_school_districts_district_2023_24 > 0,
+        total_enrollment_exclude_ae_for_sy_2014_15_onward_state_2023_24 /
+          total_number_operational_school_districts_district_2023_24,
+        NA_real_
+      ),
+    
+    schools_per_operational_district =
+      if_else(
+        total_number_operational_school_districts_district_2023_24 > 0,
+        total_number_operational_schools_public_school_2023_24 /
+          total_number_operational_school_districts_district_2023_24,
+        NA_real_
+      ),
+    
+    charter_school_share =
+      if_else(
+        total_number_operational_schools_public_school_2023_24 > 0,
+        total_number_operational_charter_schools_public_school_2023_24 /
+          total_number_operational_schools_public_school_2023_24,
+        NA_real_
+      ),
+    
+    elementary_teacher_share =
+      if_else(
+        full_time_equivalent_fte_teachers_state_2023_24 > 0,
+        elementary_teachers_state_2023_24 /
+          full_time_equivalent_fte_teachers_state_2023_24,
+        NA_real_
+      )
+  )
+
+district_features %>%
+  select(
+    state_name,
+    total_enrollment_exclude_ae_for_sy_2014_15_onward_state_2023_24,
+    pupil_teacher_ratio_state_2023_24,
+    enrollment_per_operational_district,
+    schools_per_operational_district,
+    charter_school_share,
+    elementary_teacher_share
+  ) %>%
+  glimpse()
 ```
+
+What kinds of questions might you answer with this data set?
 
 ## Recommended readings
 
-Knaflic, C. N.
-(2015).
-*Storytelling with data: A data visualization guide for business professionals*.
-Wiley.
+Knaflic, C. N. (2015). *Storytelling with data: A data visualization guide for business professionals*. Wiley.

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="FirstName LastName">
+<meta name="author" content="Nathan Alexander">
 
 <title>Univariate analysis – ELPS Data and Methods Institute: Quantitative Data Collection and Analysis</title>
 <style>
@@ -264,7 +264,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#libraries-and-packages" id="toc-libraries-and-packages" class="nav-link active" data-scroll-target="#libraries-and-packages">Libraries and packages</a></li>
+  <li><a href="#libraries-and-packages" id="toc-libraries-and-packages" class="nav-link active" data-scroll-target="#libraries-and-packages">Libraries and packages</a>
+  <ul class="collapse">
+  <li><a href="#task-1-open-a-new-rscript" id="toc-task-1-open-a-new-rscript" class="nav-link" data-scroll-target="#task-1-open-a-new-rscript">Task 1: Open a new RScript</a></li>
+  <li><a href="#task-2-write-a-preamble" id="toc-task-2-write-a-preamble" class="nav-link" data-scroll-target="#task-2-write-a-preamble">Task 2: Write a preamble</a></li>
+  <li><a href="#task-3-check-your-working-directory" id="toc-task-3-check-your-working-directory" class="nav-link" data-scroll-target="#task-3-check-your-working-directory">Task 3: Check your working directory</a></li>
+  <li><a href="#task-4-install-your-packages" id="toc-task-4-install-your-packages" class="nav-link" data-scroll-target="#task-4-install-your-packages">Task 4: Install your packages</a></li>
+  <li><a href="#task-5-load-your-libraries" id="toc-task-5-load-your-libraries" class="nav-link" data-scroll-target="#task-5-load-your-libraries">Task 5: Load your libraries</a></li>
+  <li><a href="#task-6-call-in-the-critstats-data-package" id="toc-task-6-call-in-the-critstats-data-package" class="nav-link" data-scroll-target="#task-6-call-in-the-critstats-data-package">Task 6: Call in the <code>critstats</code> data package</a></li>
+  <li><a href="#task-7-view-datasets-in-the-current-r-session" id="toc-task-7-view-datasets-in-the-current-r-session" class="nav-link" data-scroll-target="#task-7-view-datasets-in-the-current-r-session">Task 7: View datasets in the current R session</a></li>
+  <li><a href="#task-8-view-datasets-only-in-the-critstats-data-package" id="toc-task-8-view-datasets-only-in-the-critstats-data-package" class="nav-link" data-scroll-target="#task-8-view-datasets-only-in-the-critstats-data-package">Task 8: View datasets only in the <code>critstats</code> data package</a></li>
+  <li><a href="#task-9-view-documentation-for-another-data-package-called-datasets" id="toc-task-9-view-documentation-for-another-data-package-called-datasets" class="nav-link" data-scroll-target="#task-9-view-documentation-for-another-data-package-called-datasets">Task 9: View documentation for another data package called <code>datasets</code></a></li>
+  <li><a href="#task-10-view-documentation-for-the-entire-critstats-data-package" id="toc-task-10-view-documentation-for-the-entire-critstats-data-package" class="nav-link" data-scroll-target="#task-10-view-documentation-for-the-entire-critstats-data-package">Task 10: View documentation for the entire <code>critstats</code> data package</a></li>
+  <li><a href="#task-11-view-documentation-for-a-specific-data-set" id="toc-task-11-view-documentation-for-a-specific-data-set" class="nav-link" data-scroll-target="#task-11-view-documentation-for-a-specific-data-set">Task 11: View documentation for a specific data set</a></li>
+  <li><a href="#task-12-assign-a-dataset-to-an-object-for-efficiency" id="toc-task-12-assign-a-dataset-to-an-object-for-efficiency" class="nav-link" data-scroll-target="#task-12-assign-a-dataset-to-an-object-for-efficiency">Task 12: Assign a dataset to an object for efficiency</a></li>
+  <li><a href="#task-13-run-a-simple-command" id="toc-task-13-run-a-simple-command" class="nav-link" data-scroll-target="#task-13-run-a-simple-command">Task 13: Run a simple command</a></li>
+  <li><a href="#task-14-view-your-data" id="toc-task-14-view-your-data" class="nav-link" data-scroll-target="#task-14-view-your-data">Task 14: View your data</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -283,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>FirstName LastName </p>
+             <p>Nathan Alexander </p>
           </div>
   </div>
     
@@ -320,8 +336,247 @@ Attaching package: 'dplyr'</code></pre>
     intersect, setdiff, setequal, union</code></pre>
 </div>
 </div>
+<section id="task-1-open-a-new-rscript" class="level3">
+<h3 class="anchored" data-anchor-id="task-1-open-a-new-rscript">Task 1: Open a new RScript</h3>
+<p>Now we will open a new RScript.</p>
+<p>Navigate to <code>File &gt; New File &gt; RScript</code>.</p>
+<p>This RScript file is what you will use to outline your analysis.</p>
+</section>
+<section id="task-2-write-a-preamble" class="level3">
+<h3 class="anchored" data-anchor-id="task-2-write-a-preamble">Task 2: Write a preamble</h3>
+<p>A preamble is similar to the heading of a paper.</p>
+<p>The preamble contains information that will be useful for you and your collaborators.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the `#` symbol to tell R to ignore the text</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Name: &lt;include your full name&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Date: &lt;sometimes you may want to add a date&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Purpose: &lt;insert the goals or purpose of the RScript&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Remember to use the <code>#</code> symbol to write your preamble.</p>
+<hr>
+</section>
+<section id="task-3-check-your-working-directory" class="level3">
+<h3 class="anchored" data-anchor-id="task-3-check-your-working-directory">Task 3: Check your working directory</h3>
+<p>Prior to inserting any code, it is generally helpful to check your working directory.</p>
+<p>This will ensure that you are in the right location to call and save files.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the working directory</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="task-4-install-your-packages" class="level3">
+<h3 class="anchored" data-anchor-id="task-4-install-your-packages">Task 4: Install your packages</h3>
+<p>We will use the <code>install.packages</code> function to complete a few tasks.</p>
+<p>Any required packages are generally placed at the very top of our code.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="task-5-load-your-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="task-5-load-your-libraries">Task 5: Load your libraries</h3>
+<p>After using the <code>install.packages</code> function, we need to load specific libraries.</p>
+<p>Similar to installing packages, we generally load libraries at the very top of our code.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load libraries</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(remotes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="task-6-call-in-the-critstats-data-package" class="level3">
+<h3 class="anchored" data-anchor-id="task-6-call-in-the-critstats-data-package">Task 6: Call in the <code>critstats</code> data package</h3>
+<p>We will use the <code>remotes::install_github()</code> command to install packages to call in data that I have prepared in a package for our course. The <code>remotes::install_github()</code> command communicates with GitHub to access files.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"professornaite/critstats"</span>, <span class="at">force=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+<section id="task-6-a-load-the-critstats-library" class="level4">
+<h4 class="anchored" data-anchor-id="task-6-a-load-the-critstats-library">Task 6-a: Load the <code>critstats</code> library</h4>
+<p>Next, we load the <code>critstats</code> library which will give us access to the package’s contents.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(critstats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+</section>
+<section id="task-7-view-datasets-in-the-current-r-session" class="level3">
+<h3 class="anchored" data-anchor-id="task-7-view-datasets-in-the-current-r-session">Task 7: View datasets in the current R session</h3>
+<p>RStudio has a lot of pre-loaded data sets that we can view or use to practice on different types of variables. We use the <code>data()</code> function to view all of the data sets loaded in R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A new window should open in your RStudio session.</p>
+<hr>
+</section>
+<section id="task-8-view-datasets-only-in-the-critstats-data-package" class="level3">
+<h3 class="anchored" data-anchor-id="task-8-view-datasets-only-in-the-critstats-data-package">Task 8: View datasets only in the <code>critstats</code> data package</h3>
+<p>We can also view only the data sets loaded into the <code>critstats</code> package.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="at">package=</span><span class="st">"critstats"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A new window containing only the <code>critstats</code> data should open in your RStudio session.</p>
+<hr>
+</section>
+<section id="task-9-view-documentation-for-another-data-package-called-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="task-9-view-documentation-for-another-data-package-called-datasets">Task 9: View documentation for another data package called <code>datasets</code></h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="at">package=</span><span class="st">"datasets"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="task-10-view-documentation-for-the-entire-critstats-data-package" class="level3">
+<h3 class="anchored" data-anchor-id="task-10-view-documentation-for-the-entire-critstats-data-package">Task 10: View documentation for the entire <code>critstats</code> data package</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>??critstats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="task-11-view-documentation-for-a-specific-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="task-11-view-documentation-for-a-specific-data-set">Task 11: View documentation for a specific data set</h3>
+<p>We will select the <code>africa_data_all</code> data set and view its documentation.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>??africa_data_all</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This documentation is the <code>codebook</code> for the data. It contains more specific information about the data frame, each of the variables, and any sourcing information.</p>
+<hr>
+</section>
+<section id="task-12-assign-a-dataset-to-an-object-for-efficiency" class="level3">
+<h3 class="anchored" data-anchor-id="task-12-assign-a-dataset-to-an-object-for-efficiency">Task 12: Assign a dataset to an object for efficiency</h3>
+<p>If we want to call a data set more efficiently, we can assign it to an object.</p>
+<p>The <code>df</code> object is a short name for data frame.</p>
+<p>We will assign <code>df1</code> using our assignment operator to the data set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> africa_data_all</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="task-13-run-a-simple-command" class="level3">
+<h3 class="anchored" data-anchor-id="task-13-run-a-simple-command">Task 13: Run a simple command</h3>
+<p>We can run simple commands on a data frame using the shorthand object we assigned to it.</p>
+<p>Let’s use the <code>glimpse()</code> function to explore the <code>africa_data_all</code> data frame that we assigned to the object <code>df1</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 116
+Columns: 13
+$ country           &lt;chr&gt; "Nigeria", "Ethiopia", "Egypt", "DR Congo", "South A…
+$ pop               &lt;dbl&gt; 206139589, 114963588, 102334404, 89561403, 59308690,…
+$ pop.yearly.change &lt;dbl&gt; 2.58, 2.57, 1.94, 3.19, 1.28, 2.98, 2.28, 3.32, 1.85…
+$ pop.net.change    &lt;dbl&gt; 5175990, 2884858, 1946331, 2770836, 750420, 1728755,…
+$ density           &lt;dbl&gt; 226, 115, 103, 40, 49, 67, 94, 229, 18, 25, 83, 26, …
+$ area              &lt;dbl&gt; 910770, 1000000, 995450, 2267050, 1213090, 885800, 5…
+$ migrants          &lt;dbl&gt; -60000, 30000, -38033, 23861, 145405, -40076, -10000…
+$ fertility.rate    &lt;dbl&gt; 5.4, 4.3, 3.3, 6.0, 2.4, 4.9, 3.5, 5.0, 3.1, 4.4, 2.…
+$ med.age           &lt;dbl&gt; 18, 19, 25, 17, 28, 18, 20, 17, 29, 20, 30, 17, 22, …
+$ urban.pop         &lt;dbl&gt; 52, 21, 43, 46, 67, 37, 28, 26, 73, 35, 64, 67, 57, …
+$ world.share       &lt;dbl&gt; 2.64, 1.47, 1.31, 1.15, 0.76, 0.77, 0.69, 0.59, 0.56…
+$ pop_in_mill       &lt;dbl&gt; 206.13959, 114.96359, 102.33440, 89.56140, 59.30869,…
+$ year              &lt;dbl&gt; 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020…</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="task-14-view-your-data" class="level3">
+<h3 class="anchored" data-anchor-id="task-14-view-your-data">Task 14: View your data</h3>
+<p>We can use the <code>view()</code> function to see our entire data frame.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>(df1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You may have noticed that a new window opened so that you can <code>view()</code> the entire data set. Sometimes, it is inefficient to use this command. Let’s look at two other options.</p>
+<hr>
+<section id="task-14-a-view-the-head-of-your-data" class="level4">
+<h4 class="anchored" data-anchor-id="task-14-a-view-the-head-of-your-data">Task 14-a: View the <code>head</code> of your data</h4>
+<p>We use the <code>head</code> function to get a closer look at the first few observations.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the `head` function to view the top of the data</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 13
+  country           pop pop.yearly.change pop.net.change density   area migrants
+  &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;
+1 Nigeria        2.06e8              2.58        5175990     226 9.11e5   -60000
+2 Ethiopia       1.15e8              2.57        2884858     115 1   e6    30000
+3 Egypt          1.02e8              1.94        1946331     103 9.95e5   -38033
+4 DR Congo       8.96e7              3.19        2770836      40 2.27e6    23861
+5 South Africa   5.93e7              1.28         750420      49 1.21e6   145405
+6 Tanzania       5.97e7              2.98        1728755      67 8.86e5   -40076
+# ℹ 6 more variables: fertility.rate &lt;dbl&gt;, med.age &lt;dbl&gt;, urban.pop &lt;dbl&gt;,
+#   world.share &lt;dbl&gt;, pop_in_mill &lt;dbl&gt;, year &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>Change the number of observations that you want to view in the data frame.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the `head` function to view ten (10) observations at the top of the data</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df1, <span class="at">n=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 13
+   country          pop pop.yearly.change pop.net.change density   area migrants
+   &lt;chr&gt;          &lt;dbl&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;
+ 1 Nigeria       2.06e8              2.58        5175990     226 9.11e5   -60000
+ 2 Ethiopia      1.15e8              2.57        2884858     115 1   e6    30000
+ 3 Egypt         1.02e8              1.94        1946331     103 9.95e5   -38033
+ 4 DR Congo      8.96e7              3.19        2770836      40 2.27e6    23861
+ 5 South Africa  5.93e7              1.28         750420      49 1.21e6   145405
+ 6 Tanzania      5.97e7              2.98        1728755      67 8.86e5   -40076
+ 7 Kenya         5.38e7              2.28        1197323      94 5.69e5   -10000
+ 8 Uganda        4.57e7              3.32        1471413     229 2.00e5   168694
+ 9 Algeria       4.39e7              1.85         797990      18 2.38e6   -10000
+10 Sudan         4.38e7              2.42        1036022      25 1.77e6   -50000
+# ℹ 6 more variables: fertility.rate &lt;dbl&gt;, med.age &lt;dbl&gt;, urban.pop &lt;dbl&gt;,
+#   world.share &lt;dbl&gt;, pop_in_mill &lt;dbl&gt;, year &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="task-14-b-view-the-tail-of-your-data" class="level4">
+<h4 class="anchored" data-anchor-id="task-14-b-view-the-tail-of-your-data">Task 14-b: View the <code>tail</code> of your data</h4>
+<p>We use the <code>tail</code> function to get a closer look at the last few observations.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the `tail` function to view the top of the data</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(df1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 13
+  country           pop pop.yearly.change pop.net.change density   area migrants
+  &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;
+1 Cabo Verde     598682              0.93           5533     149   4030    -1227
+2 Western Sahara 587259              1.96          11273       2 266000     5600
+3 Mayotte        335995              3.03           9894     896    375        0
+4 Sao Tome &amp; Pr… 231856              1.97           4476     242    960     -600
+5 Seychelles     107660              0.51            542     234    460     -200
+6 Saint Helena     5314             -1.12            -60      14    390        0
+# ℹ 6 more variables: fertility.rate &lt;dbl&gt;, med.age &lt;dbl&gt;, urban.pop &lt;dbl&gt;,
+#   world.share &lt;dbl&gt;, pop_in_mill &lt;dbl&gt;, year &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>Change the number of observations that you want to view in the data frame.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the `tail` function to view ten (10) observations at the top of the data</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(df1, <span class="at">n=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 13
+   country          pop pop.yearly.change pop.net.change density   area migrants
+   &lt;chr&gt;          &lt;dbl&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;
+ 1 Eswatini      1.21e6              0.76           9152      70  17200    -5268
+ 2 Djibouti      1.14e6              1.39          15606      49  23180      900
+ 3 Réunion       9.82e5              0.8            7744     393   2500     -630
+ 4 Comoros       8.52e5              1.83          15301     458   1861    -2000
+ 5 Cabo Verde    5.99e5              0.93           5533     149   4030    -1227
+ 6 Western Saha… 5.87e5              1.96          11273       2 266000     5600
+ 7 Mayotte       3.36e5              3.03           9894     896    375        0
+ 8 Sao Tome &amp; P… 2.32e5              1.97           4476     242    960     -600
+ 9 Seychelles    1.08e5              0.51            542     234    460     -200
+10 Saint Helena  5.31e3             -1.12            -60      14    390        0
+# ℹ 6 more variables: fertility.rate &lt;dbl&gt;, med.age &lt;dbl&gt;, urban.pop &lt;dbl&gt;,
+#   world.share &lt;dbl&gt;, pop_in_mill &lt;dbl&gt;, year &lt;dbl&gt;</code></pre>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
