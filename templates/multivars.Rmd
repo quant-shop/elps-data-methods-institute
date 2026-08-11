@@ -1,6 +1,6 @@
 ---
 title: "Analyzing Multiple Variables"
-author: "FirstName LastName"
+author: "Nathan Alexander"
 output: html_document
 editor_options:
     chunk_output_type: console

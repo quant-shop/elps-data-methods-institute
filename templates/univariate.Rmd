@@ -1,6 +1,6 @@
 ---
 title: "Univariate analysis"
-author: "FirstName LastName"
+author: "Nathan Alexander"
 output: html_document
 editor_options:
     chunk_output_type: console
@@ -19,4 +19,262 @@ library(ggplot2)
 library(dplyr)
 ```
 
+### Task 1: Open a new RScript
 
+Now we will open a new RScript.
+
+Navigate to `File > New File > RScript`.
+
+This RScript file is what you will use to outline your analysis.
+
+### Task 2: Write a preamble
+
+A preamble is similar to the heading of a paper.
+
+The preamble contains information that will be useful for you and your collaborators.
+
+```{r}
+# Use the `#` symbol to tell R to ignore the text
+## Name: <include your full name>
+## Date: <sometimes you may want to add a date>
+## Purpose: <insert the goals or purpose of the RScript>
+```
+
+Remember to use the `#` symbol to write your preamble.
+
+------------------------------------------------------------------------
+
+### Task 3: Check your working directory
+
+Prior to inserting any code, it is generally helpful to check your working directory.
+
+This will ensure that you are in the right location to call and save files.
+
+```{r}
+#| echo: true
+#| output: false
+# get the working directory
+getwd()
+```
+
+
+------------------------------------------------------------------------
+
+### Task 4: Install your packages
+
+We will use the `install.packages` function to complete a few tasks.
+
+Any required packages are generally placed at the very top of our code.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+install.packages("remotes", repos = "http://cran.us.r-project.org")
+```
+
+------------------------------------------------------------------------
+
+### Task 5: Load your libraries
+
+After using the `install.packages` function, we need to load specific libraries.
+
+Similar to installing packages, we generally load libraries at the very top of our code.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+# load libraries
+library(tidyverse)
+library(remotes)
+```
+
+------------------------------------------------------------------------
+
+### Task 6: Call in the `critstats` data package
+
+We will use the `remotes::install_github()` command to install packages to call in data that I have prepared in a package for our course. The `remotes::install_github()` command communicates with GitHub to access files.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+remotes::install_github("professornaite/critstats", force=TRUE)
+```
+
+------------------------------------------------------------------------
+
+#### Task 6-a: Load the `critstats` library
+
+Next, we load the `critstats` library which will give us access to the package's contents.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+library(critstats)
+```
+
+------------------------------------------------------------------------
+
+### Task 7: View datasets in the current R session
+
+RStudio has a lot of pre-loaded data sets that we can view or use to practice on different types of variables. We use the `data()` function to view all of the data sets loaded in R.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+data()
+```
+
+A new window should open in your RStudio session.
+
+------------------------------------------------------------------------
+
+### Task 8: View datasets only in the `critstats` data package
+
+We can also view only the data sets loaded into the `critstats` package.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+data(package="critstats")
+```
+
+A new window containing only the `critstats` data should open in your RStudio session.
+
+------------------------------------------------------------------------
+
+### Task 9: View documentation for another data package called `datasets`
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+data(package="datasets")
+```
+
+------------------------------------------------------------------------
+
+### Task 10: View documentation for the entire `critstats` data package
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+??critstats
+```
+
+------------------------------------------------------------------------
+
+### Task 11: View documentation for a specific data set
+
+We will select the `africa_data_all` data set and view its documentation.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+??africa_data_all
+```
+
+This documentation is the `codebook` for the data. It contains more specific information about the data frame, each of the variables, and any sourcing information.
+
+------------------------------------------------------------------------
+
+### Task 12: Assign a dataset to an object for efficiency
+
+If we want to call a data set more efficiently, we can assign it to an object.
+
+The `df` object is a short name for data frame.
+
+We will assign `df1` using our assignment operator to the data set.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+df1 <- africa_data_all
+```
+
+------------------------------------------------------------------------
+
+### Task 13: Run a simple command
+
+We can run simple commands on a data frame using the shorthand object we assigned to it.
+
+Let's use the `glimpse()` function to explore the `africa_data_all` data frame that we assigned to the object `df1`.
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+glimpse(df1)
+```
+
+------------------------------------------------------------------------
+
+### Task 14: View your data
+
+We can use the `view()` function to see our entire data frame.
+
+```{r}
+#| echo: true
+#| output: false
+#| warning: false
+view(df1)
+```
+
+You may have noticed that a new window opened so that you can `view()` the entire data set. Sometimes, it is inefficient to use this command. Let's look at two other options.
+
+------------------------------------------------------------------------
+
+#### Task 14-a: View the `head` of your data
+
+We use the `head` function to get a closer look at the first few observations.
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# use the `head` function to view the top of the data
+head(df1)
+```
+
+Change the number of observations that you want to view in the data frame.
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# use the `head` function to view ten (10) observations at the top of the data
+head(df1, n=10)
+```
+
+------------------------------------------------------------------------
+
+#### Task 14-b: View the `tail` of your data
+
+We use the `tail` function to get a closer look at the last few observations.
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# use the `tail` function to view the top of the data
+tail(df1)
+```
+
+Change the number of observations that you want to view in the data frame.
+
+```{r}
+#| echo: true
+#| output: true
+#| warning: false
+# use the `tail` function to view ten (10) observations at the top of the data
+tail(df1, n=10)
+```

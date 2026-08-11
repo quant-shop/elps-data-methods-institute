@@ -105,6 +105,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Part 2: Quantitative data analysis – ELPS Data and Methods Institute: Quantitative Data Collection and Analysis">
 <meta property="og:description" content="Quantitative Session of the 2026 HUSOE ELPS Methods and Data Institute">
@@ -267,7 +296,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#case-study-hbcus-and-educational-geography" id="toc-case-study-hbcus-and-educational-geography" class="nav-link active" data-scroll-target="#case-study-hbcus-and-educational-geography">Case Study: HBCUs and Educational Geography</a>
+  <li><a href="#the-big-picture" id="toc-the-big-picture" class="nav-link active" data-scroll-target="#the-big-picture">The Big Picture</a></li>
+  <li><a href="#case-study-hbcus-and-educational-geography" id="toc-case-study-hbcus-and-educational-geography" class="nav-link" data-scroll-target="#case-study-hbcus-and-educational-geography">Case Study: HBCUs and Educational Geography</a>
   <ul class="collapse">
   <li><a href="#step-1-load-packages" id="toc-step-1-load-packages" class="nav-link" data-scroll-target="#step-1-load-packages">Step 1: Load Packages</a></li>
   <li><a href="#step-2-load-the-data" id="toc-step-2-load-the-data" class="nav-link" data-scroll-target="#step-2-load-the-data">Step 2: Load the data</a></li>
@@ -327,6 +357,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="the-big-picture" class="level3">
+<h3 class="anchored" data-anchor-id="the-big-picture">The Big Picture</h3>
+<p>Prior to jumping into more details about univariate data examples in the next section, it will be important to gather a “big picture” view of the field. This big picture view will provide us with a high-level description of the various topics we will cover in the course.</p>
+<hr>
+<section id="population-parameter" class="level4">
+<h4 class="anchored" data-anchor-id="population-parameter">Population parameter</h4>
+<p>A number which summarizes the entire group.</p>
+</section>
+<section id="sample-statistic" class="level4">
+<h4 class="anchored" data-anchor-id="sample-statistic">Sample statistic</h4>
+<p>A single number that summarizes a subset of data, or the sample.</p>
+</section>
+<section id="confidence-interval-ci" class="level4">
+<h4 class="anchored" data-anchor-id="confidence-interval-ci">Confidence interval (CI)</h4>
+<ul>
+<li><p>Range of likely or plausible values for a population parameter.</p></li>
+<li><p>Based on a sample and statistics from that sample.</p></li>
+<li><p><em>Margin of error</em> represents the number of standard deviations on a statistic.</p></li>
+</ul>
+</section>
+<section id="hypothesis-testing" class="level4">
+<h4 class="anchored" data-anchor-id="hypothesis-testing">Hypothesis testing</h4>
+<p>Statistical procedure used to test an existing claim about a population.</p>
+<ul>
+<li><p>Test is based on data; most ideally data collected via probability sampling.</p></li>
+<li><p><span class="math inline">\(H_0\)</span> - Null hypothesis: If data supports the claim, fail to reject <span class="math inline">\(H_0\)</span></p></li>
+<li><p><span class="math inline">\(H_a\)</span> - Alternative hypothesis: If data does not support claim, reject <span class="math inline">\(H_0\)</span></p></li>
+</ul>
+</section>
+<section id="analysis-of-variance-anova" class="level4">
+<h4 class="anchored" data-anchor-id="analysis-of-variance-anova">Analysis of variance (ANOVA)</h4>
+<p>Comparing means of more than two populations.</p>
+<p><em>F-statistic</em> is a ratio that is used to compare variability between sets.</p>
+<section id="multiple-comparison-procedures" class="level5">
+<h5 class="anchored" data-anchor-id="multiple-comparison-procedures">Multiple comparison procedures</h5>
+<p>Set of statistical tests that compare means to each other.</p>
+<ul>
+<li><p>Examples include Turkey’s test, Least significant difference (LSD), pairwise t-test</p></li>
+<li><p>These tests are only conducted if you analysis of variance identifies differences</p></li>
+</ul>
+</section>
+</section>
+<section id="interaction-effects" class="level4">
+<h4 class="anchored" data-anchor-id="interaction-effects">Interaction effects</h4>
+<p>Interaction effects are relevant to statistical models that use two or more variables.</p>
+</section>
+<section id="correlation" class="level4">
+<h4 class="anchored" data-anchor-id="correlation">Correlation</h4>
+<p>Measures the strength and direction of a linear relationship between two variables.</p>
+</section>
+<section id="linear-regression" class="level4">
+<h4 class="anchored" data-anchor-id="linear-regression">Linear regression</h4>
+<p>Helps make predictions for one variable based on the values of another.</p>
+<ul>
+<li><p>There are many types of regression:</p>
+<ul>
+<li><p>Simple linear regression</p></li>
+<li><p>Multiple linear regression</p></li>
+<li><p>Logistic regression</p></li>
+<li><p>Non-linear regression</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="chi-square-test" class="level4">
+<h4 class="anchored" data-anchor-id="chi-square-test">Chi-square test</h4>
+<p>When using correlation and regression analyses, one core assumption is that the variables are quantitative in nature.</p>
+<p>We use a chi-square test to study categorical variables.</p>
+<hr>
+</section>
+</section>
 <section id="case-study-hbcus-and-educational-geography" class="level2">
 <h2 class="anchored" data-anchor-id="case-study-hbcus-and-educational-geography">Case Study: HBCUs and Educational Geography</h2>
 <p>In this section, we analyze data on Historically Black Colleges and Universities (HBCUs) to explore patterns in location, institutional type, and founding history.</p>

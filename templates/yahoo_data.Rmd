@@ -1,6 +1,6 @@
 ---
-title: "DATA 202 - Analysis of Yahoo! News Poll"
-author: "FirstName LastName"
+title: "Analysis of Yahoo! News Poll"
+author: "Nathan Alexander"
 date: "Week 7"
 output: html_document
 editor_options:

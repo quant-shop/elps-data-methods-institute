@@ -35,6 +35,97 @@ library(here)
 here::i_am("parts/part02.qmd")
 ```
 
+### The Big Picture
+
+Prior to jumping into more details about data analysis, and how we might be more critical in our anlayses, it will be important to gather a "big picture" view of the field. This big picture view will provide us with a high-level description of the various topics we will cover in the course.
+
+---
+
+#### Population parameter
+
+A number which summarizes the entire group.
+
+#### Sample statistic
+
+A single number that summarizes a subset of data, or the sample.
+
+---
+
+#### Confidence interval (CI)
+
+-   Range of likely or plausible values for a population parameter.
+
+-   Based on a sample and statistics from that sample.
+
+-   *Margin of error* represents the number of standard deviations on a statistic.
+
+---
+
+#### Hypothesis testing
+
+Statistical procedure used to test an existing claim about a population.
+
+-   Test is based on data; most ideally data collected via probability sampling.
+
+-   $H_0$ - Null hypothesis: If data supports the claim, fail to reject $H_0$
+
+-   $H_a$ - Alternative hypothesis: If data does not support claim, reject $H_0$
+
+---
+
+#### Analysis of variance (ANOVA)
+
+Comparing means of more than two populations.
+
+*F-statistic* is a ratio that is used to compare variability between sets.
+
+---
+
+##### Multiple comparison procedures
+
+Set of statistical tests that compare means to each other.
+
+-   Examples include Turkey's test, Least significant difference (LSD), pairwise t-test
+
+-   These tests are only conducted if you analysis of variance identifies differences
+
+---
+
+#### Interaction effects
+
+Interaction effects are relevant to statistical models that use two or more variables.
+
+#### Correlation
+
+Measures the strength and direction of a linear relationship between two variables.
+
+#### Linear regression
+
+Helps make predictions for one variable based on the values of another.
+
+**There are multiple types of regression**:
+
+  - Simple linear regression
+
+  - Multiple linear regression
+
+  - Logistic regression
+
+  - Non-linear regression
+
+---
+
+#### Chi-square test
+
+When using correlation and regression analyses, one core assumption is that the variables are quantitative in nature.
+
+We use a chi-square test to study categorical variables.
+
+---
+
+## Discussion: What types of tests will you be using in your dissertation?
+
+---
 
 ## Case Study: HBCUs and Educational Geography
 
@@ -211,4 +302,3 @@ Knaflic, C. N.
 (2015).
 *Storytelling with data: A data visualization guide for business professionals*.
 Wiley.
-

@@ -213,6 +213,77 @@ Nathan Alexander, PhD
 </div>
 
 </section>
+<section class="slide level2">
+
+<h3 id="the-big-picture">The Big Picture</h3>
+<p>Prior to jumping into more details about data analysis, and how we might be more critical in our anlayses, it will be important to gather a “big picture” view of the field. This big picture view will provide us with a high-level description of the various topics we will cover in the course.</p>
+</section>
+<section class="slide level2">
+
+<h4 id="population-parameter">Population parameter</h4>
+<p>A number which summarizes the entire group.</p>
+<h4 id="sample-statistic">Sample statistic</h4>
+<p>A single number that summarizes a subset of data, or the sample.</p>
+</section>
+<section class="slide level2">
+
+<h4 id="confidence-interval-ci">Confidence interval (CI)</h4>
+<ul>
+<li><p>Range of likely or plausible values for a population parameter.</p></li>
+<li><p>Based on a sample and statistics from that sample.</p></li>
+<li><p><em>Margin of error</em> represents the number of standard deviations on a statistic.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="hypothesis-testing">Hypothesis testing</h4>
+<p>Statistical procedure used to test an existing claim about a population.</p>
+<ul>
+<li><p>Test is based on data; most ideally data collected via probability sampling.</p></li>
+<li><p><span class="math inline">\(H_0\)</span> - Null hypothesis: If data supports the claim, fail to reject <span class="math inline">\(H_0\)</span></p></li>
+<li><p><span class="math inline">\(H_a\)</span> - Alternative hypothesis: If data does not support claim, reject <span class="math inline">\(H_0\)</span></p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="analysis-of-variance-anova">Analysis of variance (ANOVA)</h4>
+<p>Comparing means of more than two populations.</p>
+<p><em>F-statistic</em> is a ratio that is used to compare variability between sets.</p>
+</section>
+<section class="slide level2">
+
+<h5 id="multiple-comparison-procedures">Multiple comparison procedures</h5>
+<p>Set of statistical tests that compare means to each other.</p>
+<ul>
+<li><p>Examples include Turkey’s test, Least significant difference (LSD), pairwise t-test</p></li>
+<li><p>These tests are only conducted if you analysis of variance identifies differences</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="interaction-effects">Interaction effects</h4>
+<p>Interaction effects are relevant to statistical models that use two or more variables.</p>
+<h4 id="correlation">Correlation</h4>
+<p>Measures the strength and direction of a linear relationship between two variables.</p>
+<h4 id="linear-regression">Linear regression</h4>
+<p>Helps make predictions for one variable based on the values of another.</p>
+<p><strong>There are multiple types of regression</strong>:</p>
+<ul>
+<li><p>Simple linear regression</p></li>
+<li><p>Multiple linear regression</p></li>
+<li><p>Logistic regression</p></li>
+<li><p>Non-linear regression</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="chi-square-test">Chi-square test</h4>
+<p>When using correlation and regression analyses, one core assumption is that the variables are quantitative in nature.</p>
+<p>We use a chi-square test to study categorical variables.</p>
+</section>
+<section id="discussion-what-types-of-tests-will-you-be-using-in-your-dissertation" class="slide level2">
+<h2>Discussion: What types of tests will you be using in your dissertation?</h2>
+</section>
 <section id="case-study-hbcus-and-educational-geography" class="slide level2">
 <h2>Case Study: HBCUs and Educational Geography</h2>
 <p>In this section, we analyze data on Historically Black Colleges and Universities (HBCUs) to explore patterns in location, institutional type, and founding history.</p>
@@ -324,7 +395,7 @@ $ type    &lt;chr&gt; "Public, 4 Year", "Public, 4 Year", "Public, 4 Year", "Pub
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="part02_files/figure-html/unnamed-chunk-6-1.png" width="672"></p>
+<p><img data-src="part02_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -366,7 +437,7 @@ $ type    &lt;chr&gt; "Public, 4 Year", "Public, 4 Year", "Public, 4 Year", "Pub
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="part02_files/figure-html/unnamed-chunk-8-1.png" width="672"></p>
+<p><img data-src="part02_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -390,7 +461,7 @@ $ type    &lt;chr&gt; "Public, 4 Year", "Public, 4 Year", "Public, 4 Year", "Pub
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="part02_files/figure-html/unnamed-chunk-10-1.png" width="672"></p>
+<p><img data-src="part02_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -754,6 +825,44 @@ $ type    &lt;chr&gt; "Public, 4 Year", "Public, 4 Year", "Public, 4 Year", "Pub
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
