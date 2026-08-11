@@ -27,12 +27,12 @@ By the end of this workshop, you will be able to:
 ## Schedule
 
 | Session | Topic | Duration | Time |
-|---------------|--------------------------|---------------|---------------|
-|  | Introduction & site orientation | 10 minutes | 10:00–10:10 AM |
-| 1a | [Quantitative data collection](parts/part01a.qmd) | 30 minutes | 10:10–10:40 AM |
-|  | Tech break | 5 minutes | 10:40–10:45 AM |
-| 1b | [Getting started in R and Posit](parts/part01b.qmd) | 45 minutes | 10:45–11:30 AM |
-|  | Break | 15 minutes | 11:30–11:45 AM |
-| 2 | [Quantitative data analysis](parts/part02.qmd) | 75 minutes | 11:45 AM-1:00 PM |
+|----------------|------------------------|----------------|----------------|
+|  | Welcome, overview & site orientation | 30 minutes | 10:00–10:30 AM |
+| 1a | [Quantitative data collection](parts/part01a.qmd) | 30 minutes | 10:30–11:00 AM |
+|  | Tech break | 15 minutes | 11:00–11:15 AM |
+| 1b | [Getting started in R and Posit](parts/part01b.qmd) | 45 minutes | 11:15 AM–12:00 PM |
+|  | Break | 15 minutes | 12:00–12:15 PM |
+| 2 | [Quantitative data analysis](parts/part02.qmd) | 45 minutes | 12:15 PM-1:00 PM |
 |  | Lunch break | 30 minutes | 1:00–1:30 PM |
 | 3 | [Working session and Q&A](parts/part03.qmd) | 90 minutes | 1:30 - 3:00 PM |
